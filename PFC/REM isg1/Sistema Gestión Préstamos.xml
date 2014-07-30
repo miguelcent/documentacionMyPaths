@@ -1,0 +1,4704 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE rem:requirementsProject SYSTEM "d:\rem\xml\REM_1_2_2.dtd">
+<rem:requirementsProject
+xmlns:rem="http://rem.lsi.us.es">
+<rem:name>Sistema Gestión Préstamos</rem:name>
+<rem:c_requirementsSpecification oid = "CRS-0001">
+<rem:name>Documento de Requisitos del Sistema</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>6</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno
+</rem:comments>
+	 <rem:preparedFor organizations = "ORG-0001 "/>
+	 <rem:preparedBy organizations = "ORG-0002 "/>
+<rem:section
+ oid = "SEC-0001">
+<rem:name>
+Introducción</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>6</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>1</rem:level>
+<rem:number>1 </rem:number>
+<rem:paragraph
+ oid = "PRG-0001">
+<rem:name>
+Introducción</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>Presentamos aquí el documento de requisitos de un sistema de <rem:ref oid="GLO-0015">préstamos</rem:ref> bancarios.<br/>La entidad para la que se realiza este trabajo posee sucursales en todo el país. Debido a la gran envergadura de este banco se tiene la necesidad de unificar procedimientos a la hora de gestionar los <rem:ref oid="GLO-0015">préstamos</rem:ref>, así como sistematizar el proceso y almacenar todos los datos de modo que sean accesibles desde toda sucursal.<br/><br/>En el siguiente documento se encuentran los requisitos que el sistema deberá cumplir, obtenidos a raíz del análisis de las entrevistas sostenidas con los informadores de la empresa.</rem:text>
+</rem:paragraph>
+</rem:section>
+<rem:section
+ oid = "SEC-0002">
+<rem:name>
+Participantes en el proyecto</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>6</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>1</rem:level>
+<rem:number>2 </rem:number>
+<rem:section
+ oid = "SEC-0003">
+<rem:name>
+Organizaciones</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>6</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>2</rem:level>
+<rem:number>2.1 </rem:number>
+<rem:organization
+ oid = "ORG-0001">
+<rem:name>
+Banca Asturiana</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0004 "/>
+<rem:comments>
+Entidad bancaria</rem:comments>
+<rem:address>Avda. de la Constitucion 26<br/>41001 Sevilla</rem:address>
+<rem:telephone>955985555</rem:telephone>
+<rem:fax>955985556</rem:fax>
+</rem:organization>
+<rem:organization
+ oid = "ORG-0002">
+<rem:name>
+Grupo ISG1-26</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0004 "/>
+<rem:comments>
+Escuela Técnica Superior de Ingeniería Informática, Universidad de Sevilla</rem:comments>
+<rem:address>Reina Mercedes s/n<br/>41012 Sevilla</rem:address>
+<rem:telephone>954556817 (ETSII, US)</rem:telephone>
+<rem:fax>-</rem:fax>
+</rem:organization>
+</rem:section>
+<rem:section
+ oid = "SEC-0004">
+<rem:name>
+Participantes</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>6</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>2</rem:level>
+<rem:number>2.2 </rem:number>
+<rem:stakeholder
+ oid = "STK-0001">
+<rem:name>
+María De Miguel Jiménez</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>6</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:stakeholderRole>Desarrollador</rem:stakeholderRole>
+<rem:isDeveloper/>
+<rem:worksFor organization = "ORG-0002"/>
+</rem:stakeholder>
+<rem:stakeholder
+ oid = "STK-0002">
+<rem:name>
+José Antonio Jiménez Carmona</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:stakeholderRole>Desarrollador</rem:stakeholderRole>
+<rem:isDeveloper/>
+<rem:worksFor organization = "ORG-0002"/>
+</rem:stakeholder>
+<rem:stakeholder
+ oid = "STK-0003">
+<rem:name>
+Miguel Centeno Muñoz</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:stakeholderRole>Desarrollador</rem:stakeholderRole>
+<rem:isDeveloper/>
+<rem:worksFor organization = "ORG-0002"/>
+</rem:stakeholder>
+<rem:stakeholder
+ oid = "STK-0004">
+<rem:name>
+Carmen María Sivianes Burgos</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:stakeholderRole>Desarrollador</rem:stakeholderRole>
+<rem:isDeveloper/>
+<rem:worksFor organization = "ORG-0002"/>
+</rem:stakeholder>
+<rem:stakeholder
+ oid = "STK-0005">
+<rem:name>
+María Antonia Escribano Rodríguez</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:stakeholderRole>Analista de <rem:ref oid="GLO-0016">Riesgos</rem:ref></rem:stakeholderRole>
+<rem:isCustomer/>
+<rem:worksFor organization = "ORG-0001"/>
+</rem:stakeholder>
+<rem:stakeholder
+ oid = "STK-0006">
+<rem:name>
+Aurelio Rodríguez Urbano</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>26</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0002 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:stakeholderRole>Analista de <rem:ref oid="GLO-0016">Riesgos</rem:ref> - Subdirector</rem:stakeholderRole>
+<rem:isCustomer/>
+<rem:worksFor organization = "ORG-0001"/>
+</rem:stakeholder>
+<rem:stakeholder
+ oid = "STK-0007">
+<rem:name>
+José Antonio Jiménez Budia</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>26</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0002 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:stakeholderRole>Director de Control de Gestión de Andalucía</rem:stakeholderRole>
+<rem:isCustomer/>
+<rem:worksFor organization = "ORG-0001"/>
+</rem:stakeholder>
+</rem:section>
+</rem:section>
+<rem:section
+ oid = "SEC-0005">
+<rem:name>
+Descripción del sistema actual</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>1</rem:level>
+<rem:number>3 </rem:number>
+<rem:section
+ oid = "SEC-0006">
+<rem:name>
+Solicitud de <rem:ref oid="GLO-0015">préstamo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>2</rem:level>
+<rem:number>3.1 </rem:number>
+<rem:paragraph
+ oid = "PRG-0002">
+<rem:name>
+Solicitud de un <rem:ref oid="GLO-0015">préstamo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0004 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>El proceso principal de negocio comienza cuando un cliente acude a una sucursal y solicita un <rem:ref oid="GLO-0015">préstamo</rem:ref>. El cliente relllena los formularios obligatorios y entrega la documentación necesaria al <rem:ref oid="GLO-0018">asesor</rem:ref> financiero. <br/><br/>El <rem:ref oid="GLO-0018">asesor</rem:ref> comprueba la solvencia del cliente, si está en la zona negra se le deniega el <rem:ref oid="GLO-0015">préstamo</rem:ref> y se termina el proceso, si no, se traspasan los datos a la comisión de <rem:ref oid="GLO-0015">préstamos</rem:ref> del banco para evaluar la situación y enviar la información a la Unidad de Decisión de Operaciones que analiza la información recibida. Si la <rem:ref oid="GLO-0013">UDO</rem:ref> decide denegar el prestamo, se informa al cliente y se termian el proceso.<br/><br/>Si la <rem:ref oid="GLO-0013">UDO</rem:ref> acepta, se informa al cliente y éste analiza las condiciones del <rem:ref oid="GLO-0015">préstamo</rem:ref>. Si el cliente rechaza las condiciones, se termina el proceso. Si el cliente acepta las condiciones, informa al banco que formaliza el <rem:ref oid="GLO-0015">préstamo</rem:ref> mandando la póliza al <rem:ref oid="GLO-0014">notario</rem:ref>.<br/><br/>La póliza debe ser firmada por el cliente y el <rem:ref oid="GLO-0014">notario</rem:ref>, que sella la póliza y la envía al banco y al registro de propiedad si es un <rem:ref oid="GLO-0015">préstamo</rem:ref> hipotecario. El banco formaliza la operación y entrega el dinero al cliente.<br/><br/></rem:text>
+</rem:paragraph>
+<rem:graphicFile
+ oid = "GRF-0001">
+<rem:name>
+Solicitud</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:fileName>
+<![CDATA[.\img\solicitud.wmf]]>
+</rem:fileName>
+</rem:graphicFile>
+</rem:section>
+<rem:section
+ oid = "SEC-0007">
+<rem:name>
+Comprobar solvencia cliente</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>2</rem:level>
+<rem:number>3.2 </rem:number>
+<rem:paragraph
+ oid = "PRG-0003">
+<rem:name>
+Comprobar solvencia</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0004 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>El proceso comienza cuando el <rem:ref oid="GLO-0018">asesor</rem:ref> tiene que comprobar la solvencia de un cliente que ha pedido un <rem:ref oid="GLO-0015">préstamo</rem:ref>. El <rem:ref oid="GLO-0018">asesor</rem:ref> solicita al cliente la documentación necesaria: <rem:ref oid="GLO-0012">nómina</rem:ref> y <rem:ref oid="GLO-0011">declaración de la renta</rem:ref>. Cuando el cliente envia la documentación y el <rem:ref oid="GLO-0018">asesor</rem:ref> la recibe, éste analiza los datos introduciéndolos en el Scoring. Dependiendo del resultado pueden pasar dos cosas. <br/><br/>Si el cliente está en la zona negra, no se le concede el <rem:ref oid="GLO-0015">préstamo</rem:ref> y acaba el proceso. Si está en la zona aceptable se procede a mirar la <rem:ref oid="GLO-0017">vida laboral</rem:ref> para comprobar la estabilidad. Este paso puede tardar un máximo de 15 días en los cuales el cliente está a la espera.<br/>Si después de comprobar la <rem:ref oid="GLO-0017">vida laboral</rem:ref>, se decide que el cliente no es estable, se procede a denegar el <rem:ref oid="GLO-0015">préstamo</rem:ref> y se acaba el proceso.<br/><br/>Si por el contrario el cliente resulta estable, se continua el proceso solicitando al cliente garantías: bienes y títulos de propiedad. Si en este paso el cliente comunica que no tiene ningún título de propiedad, se le solicita un <rem:ref oid="GLO-0010">avalista</rem:ref>, el cual recibe la solicitud y analiza la situación.<br/><br/>Si el <rem:ref oid="GLO-0009">aval</rem:ref> decide no aceptar la petición, se deniega el prestamo y acaba el proceso. Si por el contrario decide aceptar, el banco envía una solicitud para comprobar la información registrada en el Banco de España, y éste se la envía.<br/><br/>El banco analiza la información y si el cliente ya tenía algún <rem:ref oid="GLO-0015">préstamo</rem:ref>, se le deniega éste y termina el proceso. Si no tiene <rem:ref oid="GLO-0015">préstamos</rem:ref> pendientes, se formaliza el <rem:ref oid="GLO-0015">préstamo</rem:ref> con la firma de la póliza por parte del cliente, <rem:ref oid="GLO-0010">avalista</rem:ref> y <rem:ref oid="GLO-0014">notario</rem:ref>, el cual garantiza la firma de los anteriores, sella la póliza y la manda al banco.<br/></rem:text>
+</rem:paragraph>
+<rem:graphicFile
+ oid = "GRF-0002">
+<rem:name>
+Solvencia</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:fileName>
+<![CDATA[.\img\solvencia.wmf]]>
+</rem:fileName>
+</rem:graphicFile>
+</rem:section>
+<rem:section
+ oid = "SEC-0008">
+<rem:name>
+Control de <rem:ref oid="GLO-0015">préstamo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>2</rem:level>
+<rem:number>3.3 </rem:number>
+<rem:paragraph
+ oid = "PRG-0004">
+<rem:name>
+Control de <rem:ref oid="GLO-0015">préstamo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0004 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>El proceso principal comienza cuando el sistema comprueba si el cliente ha pagado la mensualidad correspondiente. Si el cliente ha pagado, se espera hasta el próximo plazo, pero puede que sea el último plazo, en ese caso se certifica la cancelación del <rem:ref oid="GLO-0015">préstamo</rem:ref> y se termina el proceso. <br/><br/>Si no ha pagado se declara al cliente en situación de irregularidad y se le llama para comunicarle que hay un impago. El cliente estudia la situación, si puede pagar se termina el proceso hasta el próximo plazo, si no, el banco espera 90 días para volver a reclamar el dinero. <br/><br/>Pasados los 90 días se vuelve a llamar al cliente, si puede pagar se termina el proceso hasta el próximo plazo, si no, el banco le declara en situación de morosidad y espera 150 días hasta volver a reclamar el dinero. <br/><br/>Pasados los 150 días se llama al cliente y al <rem:ref oid="GLO-0010">avalista</rem:ref> para que analicen la situación. Si el cliente puede pagar se termina el proceso hasta el próximo plazo, si no, se reclama al <rem:ref oid="GLO-0010">avalista</rem:ref>. Si el <rem:ref oid="GLO-0010">avalista</rem:ref> puede pagar se termina el proceso hasta el próximo plazo, si no, el banco procede a ejecutar el <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:text>
+</rem:paragraph>
+<rem:graphicFile
+ oid = "GRF-0003">
+<rem:name>
+Control</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:fileName>
+<![CDATA[.\img\control.wmf]]>
+</rem:fileName>
+</rem:graphicFile>
+</rem:section>
+<rem:section
+ oid = "SEC-0009">
+<rem:name>
+Cancelación de <rem:ref oid="GLO-0015">préstamo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>2</rem:level>
+<rem:number>3.4 </rem:number>
+<rem:paragraph
+ oid = "PRG-0005">
+<rem:name>
+Cancelación de <rem:ref oid="GLO-0015">préstamo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0004 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>El proceso comienza cuando el cliente solicita al banco la cancelación del <rem:ref oid="GLO-0015">préstamo</rem:ref>. El banco calcula las tasas, el total a pagar por el cliente y le solicita el pago. El cliente recibe la solicitud y abona la cantidad solicitada. Cuando el banco recibe confirmación del pago, procede a cancelar el <rem:ref oid="GLO-0015">préstamo</rem:ref> y lo notifica al cliente.</rem:text>
+</rem:paragraph>
+<rem:graphicFile
+ oid = "GRF-0004">
+<rem:name>
+Cancelación</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:fileName>
+<![CDATA[.\img\cancelacion.wmf]]>
+</rem:fileName>
+</rem:graphicFile>
+</rem:section>
+</rem:section>
+<rem:section
+ oid = "SEC-0010">
+<rem:name>
+Objetivos del sistema</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>1</rem:level>
+<rem:number>4 </rem:number>
+<rem:objective
+ oid = "OBJ-0001">
+<rem:name>
+Gestión de <rem:ref oid="GLO-0015">Préstamos</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0003 STK-0004 "/>
+<rem:sources stakeholders ="STK-0005 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0002"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0004"/>
+<rem:description>
+gestionar toda la información acerca de los <rem:ref oid="GLO-0015">préstamos</rem:ref> a particulares de un banco, abarcando desde la solicitud de <rem:ref oid="GLO-0015">préstamo</rem:ref>, así como el control mensual y cancelación de los mismos. De manera particular, en este proyecto se debe prestar especial atención a los siguientes subobjetivos. </rem:description>
+<rem:objective
+ oid = "OBJ-0002">
+<rem:name>
+Comprobar solvencia</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0002"/>
+<rem:urgency value = "URV-0003"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0004"/>
+<rem:description>
+comprobar si el cliente es válido para concederle un <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0003">
+<rem:name>
+Control mensual</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0002"/>
+<rem:urgency value = "URV-0003"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0004"/>
+<rem:description>
+controlar los pagos mensuales del <rem:ref oid="GLO-0015">préstamo</rem:ref> por parte del cliente.</rem:description>
+</rem:objective>
+<rem:objective
+ oid = "OBJ-0004">
+<rem:name>
+Cancelar <rem:ref oid="GLO-0015">préstamo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0003 STK-0004 "/>
+<rem:sources stakeholders ="STK-0005 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0002"/>
+<rem:urgency value = "URV-0003"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0004"/>
+<rem:description>
+cancelar el <rem:ref oid="GLO-0015">préstamo</rem:ref> de un cliente.</rem:description>
+</rem:objective>
+</rem:objective>
+</rem:section>
+<rem:section
+ oid = "SEC-0011">
+<rem:name>
+Catálogo de requisitos del sistema</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>1</rem:level>
+<rem:number>5 </rem:number>
+<rem:section
+ oid = "SEC-0018">
+<rem:name>
+Requisitos de Información</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>2</rem:level>
+<rem:number>5.1 </rem:number>
+<rem:informationRequirement
+ oid = "IRQ-0001">
+<rem:name>
+Documentación sobre cada cliente y <rem:ref oid="GLO-0010">avalista</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>21</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0002 "/>
+<rem:sources stakeholders ="STK-0005 STK-0006 STK-0007 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0002"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0004"/>
+<rem:relevantConcept>
+clientes, <rem:ref oid="GLO-0010">avalistas</rem:ref></rem:relevantConcept>
+<rem:averageLifeTime>
+<rem:value>50</rem:value>
+<rem:timeUnit value = "TUV-0002"/>
+</rem:averageLifeTime>
+<rem:maximumLifeTime>
+<rem:value>50</rem:value>
+<rem:timeUnit value = "TUV-0002"/>
+</rem:maximumLifeTime>
+<rem:averageOcurrences><rem:value>5</rem:value>
+</rem:averageOcurrences>
+<rem:maximumOcurrences><rem:value>100</rem:value>
+</rem:maximumOcurrences>
+<rem:specificData oid = "DAT-0020">
+<rem:description>
+Nombre completo</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0019">
+<rem:description>
+DNI</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0021">
+<rem:description>
+Dirección de domicilio</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0023">
+<rem:description>
+Fecha de nacimiento</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0022">
+<rem:description>
+Números de teléfonos de contacto</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0024">
+<rem:description>
+Activos y pasivos</rem:description>
+<rem:comments>
+Son los bienes que posee y los bienes que debe.</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0025">
+<rem:description>
+Situación familiar</rem:description>
+<rem:comments>
+Debe estar actualizado cada mes.</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0026">
+<rem:description>
+Situación laboral</rem:description>
+<rem:comments>
+Contiene el tipo de trabajo, el nombre de la empresa, el CIF de la empresa, las últimas <rem:ref oid="GLO-0012">nóminas</rem:ref> del cliente y un certificado de que se<br/>encuentra actualmente trabajando en dicha empresa. Todo esto tiene que estar actualizado cada mes.</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0028">
+<rem:description>
+Tipo de <rem:ref oid="GLO-0015">préstamo</rem:ref> solicitado</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0029">
+<rem:description>
+Cuantía del <rem:ref oid="GLO-0015">préstamo</rem:ref> solicitado</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0030">
+<rem:description>
+Motivo <rem:ref oid="GLO-0015">préstamo</rem:ref> solicitado</rem:description>
+<rem:comments>
+Redacción escrita por el cliente exponiendo los motivos que han llevado al cliente a solicitar el <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0045">
+<rem:description>
+Bienes avalados</rem:description>
+<rem:comments>
+Contiene un certificado de propiedad por cada bien avalado.</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0046">
+<rem:description>
+Servicios financieros contratados vigentes.</rem:description>
+<rem:comments>
+Contiene información sobre cada uno de los servicios financieros vigentes que el cliente tenga contratados con la entidad bancaria o con otras entidades bancarias.</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0039">
+<rem:description>
+Comentarios subjetivos</rem:description>
+<rem:comments>
+Redacción escrita por el <rem:ref oid="GLO-0018">asesor</rem:ref> encargado del <rem:ref oid="GLO-0015">préstamo</rem:ref> solicitado por el cliente con información subjetiva no interpretable por el sistema automático de concesión de <rem:ref oid="GLO-0015">préstamos</rem:ref> (Scoring).</rem:comments>
+</rem:specificData>
+</rem:informationRequirement>
+<rem:informationRequirement
+ oid = "IRQ-0002">
+<rem:name>
+Documentación sobre cada <rem:ref oid="GLO-0018">asesor</rem:ref> que gestiona <rem:ref oid="GLO-0015">préstamos</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>26</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0002 "/>
+<rem:sources stakeholders ="STK-0005 STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0003"/>
+<rem:stability value = "SBV-0003"/>
+<rem:relevantConcept>
+<rem:ref oid="GLO-0018">asesor</rem:ref></rem:relevantConcept>
+<rem:averageLifeTime>
+<rem:value>50</rem:value>
+<rem:timeUnit value = "TUV-0001"/>
+</rem:averageLifeTime>
+<rem:maximumLifeTime>
+<rem:value>50</rem:value>
+<rem:timeUnit value = "TUV-0001"/>
+</rem:maximumLifeTime>
+<rem:averageOcurrences><rem:value>100</rem:value>
+</rem:averageOcurrences>
+<rem:maximumOcurrences><rem:value>100</rem:value>
+</rem:maximumOcurrences>
+<rem:specificData oid = "DAT-0040">
+<rem:description>
+Nombre completo</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0041">
+<rem:description>
+DNI</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0042">
+<rem:description>
+Nº identificativo de <rem:ref oid="GLO-0018">asesor</rem:ref> (referencia)</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0043">
+<rem:description>
+Nº identificativo de oficina</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0044">
+<rem:description>
+Lista de <rem:ref oid="GLO-0015">préstamos</rem:ref> gestionados</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+</rem:informationRequirement>
+<rem:informationRequirement
+ oid = "IRQ-0003">
+<rem:name>
+Documentación sobre cada <rem:ref oid="GLO-0014">notario</rem:ref> que ha firmado contratos de <rem:ref oid="GLO-0015">préstamo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>26</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0002 "/>
+<rem:sources stakeholders ="STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0002"/>
+<rem:urgency value = "URV-0004"/>
+<rem:status value = "STV-0003"/>
+<rem:stability value = "SBV-0003"/>
+<rem:relevantConcept>
+<rem:ref oid="GLO-0014">notario</rem:ref></rem:relevantConcept>
+<rem:averageLifeTime>
+<rem:value>50</rem:value>
+<rem:timeUnit value = "TUV-0002"/>
+</rem:averageLifeTime>
+<rem:maximumLifeTime>
+<rem:value>50</rem:value>
+<rem:timeUnit value = "TUV-0002"/>
+</rem:maximumLifeTime>
+<rem:averageOcurrences><rem:value>100</rem:value>
+</rem:averageOcurrences>
+<rem:maximumOcurrences><rem:value>100</rem:value>
+</rem:maximumOcurrences>
+<rem:specificData oid = "DAT-0048">
+<rem:description>
+Nombre completo</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0049">
+<rem:description>
+DNI</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0050">
+<rem:description>
+Dirección de domicilio</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0051">
+<rem:description>
+Números de teléfonos de contacto</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0052">
+<rem:description>
+Número de colegiado</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+</rem:informationRequirement>
+<rem:informationRequirement
+ oid = "IRQ-0004">
+<rem:name>
+Información sobre <rem:ref oid="GLO-0015">Préstamos</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0005 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0002"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0003"/>
+<rem:stability value = "SBV-0004"/>
+<rem:relevantConcept>
+un <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:relevantConcept>
+<rem:averageLifeTime>
+<rem:value>10</rem:value>
+<rem:timeUnit value = "TUV-0002"/>
+</rem:averageLifeTime>
+<rem:maximumLifeTime>
+<rem:value>30</rem:value>
+<rem:timeUnit value = "TUV-0002"/>
+</rem:maximumLifeTime>
+<rem:averageOcurrences><rem:value>500</rem:value>
+</rem:averageOcurrences>
+<rem:maximumOcurrences><rem:value>2000</rem:value>
+</rem:maximumOcurrences>
+<rem:specificData oid = "DAT-0135">
+<rem:description>
+Número de <rem:ref oid="GLO-0015">préstamo</rem:ref></rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0136">
+<rem:description>
+Cliente al que se le da el <rem:ref oid="GLO-0015">préstamo</rem:ref></rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0137">
+<rem:description>
+<rem:ref oid="GLO-0010">Avalista</rem:ref> del cliente</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0138">
+<rem:description>
+<rem:ref oid="GLO-0018">Asesor</rem:ref> financiero que gestiona el <rem:ref oid="GLO-0015">préstamo</rem:ref></rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0139">
+<rem:description>
+Importe por el que se concede el <rem:ref oid="GLO-0015">préstamo</rem:ref></rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0140">
+<rem:description>
+Número de plazos en que se divide el <rem:ref oid="GLO-0015">préstamo</rem:ref></rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0141">
+<rem:description>
+Tipo de interés al que está sujeto el <rem:ref oid="GLO-0015">préstamo</rem:ref></rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+<rem:specificData oid = "DAT-0142">
+<rem:description>
+Tipo del <rem:ref oid="GLO-0015">préstamo</rem:ref> (hipotecario o financiero)</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:specificData>
+</rem:informationRequirement>
+</rem:section>
+<rem:section
+ oid = "SEC-0014">
+<rem:name>
+Requisitos funcionales</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>2</rem:level>
+<rem:number>5.2 </rem:number>
+<rem:section
+ oid = "SEC-0015">
+<rem:name>
+Diagramas de casos de uso</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>3</rem:level>
+<rem:number>5.2.1 </rem:number>
+<rem:graphicFile
+ oid = "GRF-0008">
+<rem:name>
+Diagrama de subsistemas</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>21</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0003 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:fileName>
+<![CDATA[.\img\Casos de uso imagen 1.wmf]]>
+</rem:fileName>
+</rem:graphicFile>
+<rem:graphicFile
+ oid = "GRF-0005">
+<rem:name>
+Diagrama de casos de uso del Sistema de Alta de Cliente</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>15</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0004 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:fileName>
+<![CDATA[.\img\Alta de cliente.wmf]]>
+</rem:fileName>
+</rem:graphicFile>
+<rem:graphicFile
+ oid = "GRF-0006">
+<rem:name>
+Diagrama de casos de uso del Sistema de Cancelar <rem:ref oid="GLO-0015">Préstamo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>15</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0004 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:fileName>
+<![CDATA[.\img\Cancelar prestamo.wmf]]>
+</rem:fileName>
+</rem:graphicFile>
+<rem:graphicFile
+ oid = "GRF-0011">
+<rem:name>
+Diagrama de Caso de Uso de Comprobación de Solvencia del Cliente</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>6</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0002 "/>
+<rem:sources stakeholders ="STK-0005 STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:fileName>
+<![CDATA[.\img\Caso de Uso - Comprobar Solvencia.wmf]]>
+</rem:fileName>
+</rem:graphicFile>
+<rem:graphicFile
+ oid = "GRF-0012">
+<rem:name>
+Diagrama de Caso de Uso de Comprobación de Pago Mensual</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>6</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0002 "/>
+<rem:sources stakeholders ="STK-0005 STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:fileName>
+<![CDATA[.\img\Caso de Uso - Comprobar Pago Mensual.wmf]]>
+</rem:fileName>
+</rem:graphicFile>
+</rem:section>
+<rem:section
+ oid = "SEC-0016">
+<rem:name>
+Definicion de los actores</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>3</rem:level>
+<rem:number>5.2.2 </rem:number>
+<rem:actor
+ oid = "ACT-0001">
+<rem:name>
+<rem:ref oid="GLO-0018">Asesor</rem:ref> Financiero</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0004 "/>
+<rem:sources stakeholders ="STK-0005 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:actorRole>al <rem:ref oid="GLO-0018">asesor</rem:ref> encargado de tratar con el cliente.</rem:actorRole>
+</rem:actor>
+<rem:actor
+ oid = "ACT-0002">
+<rem:name>
+Servicio de Información del Banco de España</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>14</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0005 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:actorRole>el servicio de información del Banco de España para atender las solicitudes sobre la situación financiera de una persona.</rem:actorRole>
+</rem:actor>
+</rem:section>
+<rem:section
+ oid = "SEC-0017">
+<rem:name>
+Casos de uso del sistema</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>3</rem:level>
+<rem:number>5.2.3 </rem:number>
+<rem:section
+ oid = "SEC-0023">
+<rem:name>
+Subsistema de gestión de clientes</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>4</rem:level>
+<rem:number>5.2.3.1 </rem:number>
+<rem:useCase
+ oid = "UC-0001">
+<rem:name>
+Alta de cliente</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>10</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0004 "/>
+<rem:sources stakeholders ="STK-0005 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0002"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0004"/>
+<rem:triggeringEvent>
+el cliente solicita ser dado de alta en el banco.</rem:triggeringEvent>
+<rem:precondition>
+El cliente no está almacenado en el sistema.</rem:precondition>
+<rem:postcondition>
+El cliente queda almacenado en el sistema.</rem:postcondition>
+<rem:frequency>
+<rem:value>
+3
+</rem:value>
+<rem:timeUnit value = "TUV-0007"/>
+</rem:frequency>
+<rem:step oid = "STP-0001">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+solicita al sistema el alta de un nuevo cliente según sus datos identificativos.</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0002">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+pide los datos del cliente.</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0003">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+introduce los datos del cliente en el sistema.</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0004">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+almacena los datos del cliente.</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0005">
+<rem:name>
+Comprobar solvencia del cliente</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>5</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0002 "/>
+<rem:sources stakeholders ="STK-0005 STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0002"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0003"/>
+<rem:stability value = "SBV-0003"/>
+<rem:triggeringEvent>
+<rem:tbd/></rem:triggeringEvent>
+<rem:precondition>
+El cliente debe ser cliente del banco, haber rellenado los formularios pertinentes y aportar la documentación necesaria.</rem:precondition>
+<rem:postcondition>
+Se conoce si al cliente se le deniega o concede el <rem:ref oid="GLO-0015">préstamo</rem:ref> después de comprobar su solvencia.</rem:postcondition>
+<rem:frequency>
+<rem:value>
+1
+</rem:value>
+<rem:timeUnit value = "TUV-0002"/>
+</rem:frequency>
+<rem:step oid = "STP-0053">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+solicita al sistema la <rem:ref oid="GLO-0012">nómina</rem:ref> y la <rem:ref oid="GLO-0011">declaración de la renta</rem:ref> del cliente</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0055">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+aporta al <rem:ref oid="GLO-0018">asesor</rem:ref> la <rem:ref oid="GLO-0012">nómina</rem:ref> y la <rem:ref oid="GLO-0011">declaración de la renta</rem:ref> del ciente.</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0056">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+analiza los datos y determina una decisión.</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0057">
+<rem:number>4</rem:number>
+<rem:condition>
+el cliente es solvente</rem:condition>
+<rem:systemAction>
+<rem:description>
+pide al <rem:ref oid="GLO-0018">asesor</rem:ref> la <rem:ref oid="GLO-0017">vida laboral</rem:ref> del cliente para comprobar su estabilidad.</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0058">
+<rem:number>5</rem:number>
+<rem:condition>
+el cliente no es estable</rem:condition>
+<rem:systemAction>
+<rem:description>
+el sistema solicita al <rem:ref oid="GLO-0018">asesor</rem:ref> garantías sobre el cliente.</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0059">
+<rem:number>6</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+introduce en el sistema los títulos de propiedad del cliente si posee, si no, introduce sus <rem:ref oid="GLO-0009">avales</rem:ref>.</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0060">
+<rem:number>7</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+pide información del cliente al Banco de España y la introduce en el sistema para ser analizada.</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0061">
+<rem:number>8</rem:number>
+<rem:systemAction>
+<rem:description>
+manda al <rem:ref oid="GLO-0010">avalista</rem:ref> la solicitud y éste estudia las condiciones, si acepta se formaliza firmando el contrato en el <rem:ref oid="GLO-0014">notario</rem:ref>.</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+</rem:section>
+<rem:section
+ oid = "SEC-0024">
+<rem:name>
+Subsistema de gestión de <rem:ref oid="GLO-0015">préstamos</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>4</rem:level>
+<rem:number>5.2.3.2 </rem:number>
+<rem:useCase
+ oid = "UC-0002">
+<rem:name>
+Cancelar <rem:ref oid="GLO-0015">préstamo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0004 "/>
+<rem:sources stakeholders ="STK-0005 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0002"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0004"/>
+<rem:triggeringEvent>
+el cliente solicita cancelar el <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:triggeringEvent>
+<rem:precondition>
+El cliente tiene un <rem:ref oid="GLO-0015">préstamo</rem:ref> pendiente.</rem:precondition>
+<rem:postcondition>
+El cliente solventa su deuda con el banco.</rem:postcondition>
+<rem:frequency>
+<rem:value>
+5
+</rem:value>
+<rem:timeUnit value = "TUV-0007"/>
+</rem:frequency>
+<rem:step oid = "STP-0005">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+calcula las tasas y el total a pagar por el cliente.</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0006">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+recibe del cliente la cantidad solicitada.</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0007">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+formaliza la cancelación del <rem:ref oid="GLO-0015">préstamo</rem:ref> e informa al cliente.</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0003">
+<rem:name>
+Registrar aceptación de un <rem:ref oid="GLO-0015">préstamo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>14</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0005 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0003"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0004"/>
+<rem:triggeringEvent>
+se procede a registrar la aceptación de un nuevo <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:triggeringEvent>
+<rem:precondition>
+El cliente es solvente y tiene <rem:ref oid="GLO-0009">aval</rem:ref>.</rem:precondition>
+<rem:postcondition>
+La concesión del <rem:ref oid="GLO-0015">préstamo</rem:ref> se ha registrado como aceptada.</rem:postcondition>
+<rem:frequency>
+<rem:value>
+2
+</rem:value>
+<rem:timeUnit value = "TUV-0007"/>
+</rem:frequency>
+<rem:step oid = "STP-0008">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+pide registrar la aceptación del <rem:ref oid="GLO-0015">préstamo</rem:ref></rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0009">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+solicita la información relativa al <rem:ref oid="GLO-0015">préstamo</rem:ref></rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0010">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+aporta la información solicitada</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0011">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+almacena la información y registra la aceptación</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0004">
+<rem:name>
+Comprobar registro del Banco de España</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>14</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0005 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0003"/>
+<rem:status value = "STV-0005"/>
+<rem:stability value = "SBV-0004"/>
+<rem:triggeringEvent>
+se procede a comprobar si el cliente posee ya <rem:ref oid="GLO-0015">préstamos</rem:ref> con otras entidades.</rem:triggeringEvent>
+<rem:precondition>
+<rem:ref oid="GLO-0015">Préstamo</rem:ref> pendiente de comprobación para ser aceptado.</rem:precondition>
+<rem:postcondition>
+Se conoce la situación actual del cliente en materia de <rem:ref oid="GLO-0015">préstamos</rem:ref>.</rem:postcondition>
+<rem:frequency>
+<rem:value>
+3
+</rem:value>
+<rem:timeUnit value = "TUV-0007"/>
+</rem:frequency>
+<rem:step oid = "STP-0012">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+ pide al sistema que inicie la comprobación de un cliente</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0013">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+solicita los datos del cliente a comprobar</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0014">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+introduce los datos del cliente a estudiar</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0015">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+envía la solicitud de información al Banco de España</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0016">
+<rem:number>5</rem:number>
+<rem:actorAction actor = "ACT-0002">
+<rem:description>
+proporciona la información financiera solicitada</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0017">
+<rem:number>6</rem:number>
+<rem:systemAction>
+<rem:description>
+almacena la información e informa al <rem:ref oid="GLO-0018">asesor</rem:ref> de su recepción</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0006">
+<rem:name>
+Comprobar pago de un plazo</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>5</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0002 "/>
+<rem:sources stakeholders ="STK-0005 STK-0006 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0003"/>
+<rem:status value = "STV-0003"/>
+<rem:stability value = "SBV-0003"/>
+<rem:triggeringEvent>
+<rem:tbd/></rem:triggeringEvent>
+<rem:precondition>
+El cliente debe tener un <rem:ref oid="GLO-0015">préstamo</rem:ref> pendiente.</rem:precondition>
+<rem:postcondition>
+La deuda mensual del cliente con el banco debe quedar resuelta.</rem:postcondition>
+<rem:frequency>
+<rem:value>
+1
+</rem:value>
+<rem:timeUnit value = "TUV-0005"/>
+</rem:frequency>
+<rem:step oid = "STP-0064">
+<rem:number>1</rem:number>
+<rem:systemAction>
+<rem:description>
+comprueba si el cliente ha pagado en el mes actual.</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0065">
+<rem:number>2</rem:number>
+<rem:condition>
+el cliente ha pagado el plazo</rem:condition>
+<rem:systemAction>
+<rem:description>
+termina la comprobación hasta el próximo mes y si era el ultimo plazo, certifica la cancelación.</rem:description>
+</rem:systemAction>
+<rem:stepException oid = "STX-0001">
+<rem:condition>
+el cliente no ha pagado el plazo</rem:condition>
+<rem:systemAction>
+<rem:description>
+declara una situación de irregularidad acerca del cliente y llama al cliente.</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:stepException oid = "STX-0003">
+<rem:condition>
+el cliente ha sido declarado en situación de irregularidad y después de la llamada no ha pagado el plazo</rem:condition>
+<rem:systemAction>
+<rem:description>
+espera 90 días y vuelve a llamar al cliente.</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:stepException oid = "STX-0005">
+<rem:condition>
+después de la espera de 90 días y la llamada, el cliente no ha pagado el plazo</rem:condition>
+<rem:systemAction>
+<rem:description>
+declara al cliente como moroso, reclama al <rem:ref oid="GLO-0010">avalista</rem:ref> o <rem:ref oid="GLO-0010">avalistas</rem:ref> y espera 150 días.</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:stepException oid = "STX-0006">
+<rem:condition>
+después de la espera de 150 días, ni el cliente ni el <rem:ref oid="GLO-0010">avalista</rem:ref> pueden pagar</rem:condition>
+<rem:systemAction>
+<rem:description>
+procede a ejecutar el <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:description>
+</rem:systemAction>
+<rem:termination value = "TEV-0003"/>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:stepException>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0007">
+<rem:name>
+Alta de <rem:ref oid="GLO-0015">Préstamo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0003 "/>
+<rem:sources stakeholders ="STK-0005 STK-0006 STK-0007 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0002"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0003"/>
+<rem:stability value = "SBV-0003"/>
+<rem:triggeringEvent>
+se procede a dar de alta un nuevo <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:triggeringEvent>
+<rem:precondition>
+Cliente registrado en el sistema.</rem:precondition>
+<rem:postcondition>
+Hay un nuevo <rem:ref oid="GLO-0015">préstamo</rem:ref> dado de alta en el sistema.</rem:postcondition>
+<rem:frequency>
+<rem:value>
+1
+</rem:value>
+<rem:timeUnit value = "TUV-0007"/>
+</rem:frequency>
+<rem:step oid = "STP-0073">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+solicita comenzar proceso de alta de un nuevo <rem:ref oid="GLO-0015">préstamo</rem:ref></rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0074">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+solicita los datos del cliente y el importe del <rem:ref oid="GLO-0015">préstamo</rem:ref></rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0075">
+<rem:number>3</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+aporta los datos solicitados</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0076">
+<rem:number>4</rem:number>
+<rem:systemAction>
+<rem:description>
+solicita la documentación aportada por el cliente</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0078">
+<rem:number>5</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+introduce la documentación</rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0079">
+<rem:number>6</rem:number>
+<rem:systemAction>
+<rem:description>
+registra la documentación y termina el proceso</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+<rem:useCase
+ oid = "UC-0008">
+<rem:name>
+Formalizar <rem:ref oid="GLO-0015">Préstamo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0003 "/>
+<rem:sources stakeholders ="STK-0006 STK-0007 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0003"/>
+<rem:urgency value = "URV-0003"/>
+<rem:status value = "STV-0003"/>
+<rem:stability value = "SBV-0003"/>
+<rem:triggeringEvent>
+se registra la formalización de un <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:triggeringEvent>
+<rem:precondition>
+Documentación firmada ante <rem:ref oid="GLO-0014">notario</rem:ref> y recibida por el <rem:ref oid="GLO-0018">asesor</rem:ref>.</rem:precondition>
+<rem:postcondition>
+<rem:ref oid="GLO-0015">Préstamo</rem:ref> formalizado.</rem:postcondition>
+<rem:frequency>
+<rem:value>
+1
+</rem:value>
+<rem:timeUnit value = "TUV-0007"/>
+</rem:frequency>
+<rem:step oid = "STP-0080">
+<rem:number>1</rem:number>
+<rem:actorAction actor = "ACT-0001">
+<rem:description>
+introduce en el sistema la documentación firmada ante <rem:ref oid="GLO-0014">notario</rem:ref></rem:description>
+</rem:actorAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+<rem:step oid = "STP-0081">
+<rem:number>2</rem:number>
+<rem:systemAction>
+<rem:description>
+registra la información y formaliza el <rem:ref oid="GLO-0015">préstamo</rem:ref> ingresando el importe al cliente</rem:description>
+</rem:systemAction>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:step>
+</rem:useCase>
+</rem:section>
+</rem:section>
+<rem:paragraph
+ oid = "PRG-0006">
+<rem:name>
+Lista de casos de uso</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0002 STK-0003 STK-0004 "/>
+<rem:sources stakeholders ="STK-0005 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>- Registrar cliente<br/>- Comprobar solvencia<br/>- Comprobar <rem:ref oid="GLO-0009">aval</rem:ref><br/>- Formalizar <rem:ref oid="GLO-0009">aval</rem:ref><br/>- Comprobar registro Banco España<br/>- Confirmar <rem:ref oid="GLO-0015">préstamo</rem:ref><br/>- Registrar <rem:ref oid="GLO-0015">préstamo</rem:ref> hipotecario<br/>- Comprobar pago de un plazo<br/>- Ejecutar <rem:ref oid="GLO-0015">préstamo</rem:ref><br/>- Confirmar fin <rem:ref oid="GLO-0015">préstamo</rem:ref><br/>- Cancelar <rem:ref oid="GLO-0015">préstamo</rem:ref><br/>- Formalizar <rem:ref oid="GLO-0015">préstamo</rem:ref><br/>- Ejecutar <rem:ref oid="GLO-0009">aval</rem:ref><br/>- Decidir aceptación <rem:ref oid="GLO-0015">préstamo</rem:ref></rem:text>
+</rem:paragraph>
+</rem:section>
+<rem:section
+ oid = "SEC-0019">
+<rem:name>
+Reglas de negocio</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>2</rem:level>
+<rem:number>5.3 </rem:number>
+<rem:constraintRequirement
+ oid = "CRQ-0001">
+<rem:name>
+Unicidad de <rem:ref oid="GLO-0015">préstamos</rem:ref> hipotecarios</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0005 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0002"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0004"/>
+<rem:stability value = "SBV-0004"/>
+<rem:description>
+Un cliente sólo puede tener un <rem:ref oid="GLO-0015">préstamo</rem:ref> hipotecario.</rem:description>
+</rem:constraintRequirement>
+</rem:section>
+<rem:section
+ oid = "SEC-0020">
+<rem:name>
+Requisitos no funcionales</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>2</rem:level>
+<rem:number>5.4 </rem:number>
+<rem:nonFunctionalRequirement
+ oid = "NFR-0001">
+<rem:name>
+Autenticación para <rem:ref oid="GLO-0015">préstamos</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:sources stakeholders ="STK-0007 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:importance value = "IMV-0002"/>
+<rem:urgency value = "URV-0002"/>
+<rem:status value = "STV-0004"/>
+<rem:stability value = "SBV-0004"/>
+<rem:description>
+permitir la autentificación de usuarios, por nombre y contraseña, para los <rem:ref oid="GLO-0018">asesores</rem:ref> financieros en la gestión de <rem:ref oid="GLO-0015">préstamos</rem:ref>.</rem:description>
+</rem:nonFunctionalRequirement>
+</rem:section>
+</rem:section>
+<rem:section
+ oid = "SEC-0012">
+<rem:name>
+Matriz de rastreabilidad</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>1</rem:level>
+<rem:number>6 </rem:number>
+<rem:traceabilityMatrix
+ oid = "TRM-0001">
+<rem:name>
+Requisitos de información</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:tr>
+<rem:th/>
+<rem:th oid ="OBJ-0001"/>
+<rem:th oid ="OBJ-0002"/>
+<rem:th oid ="OBJ-0003"/>
+<rem:th oid ="OBJ-0004"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="IRQ-0001"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="IRQ-0002"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="IRQ-0003"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="IRQ-0004"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="yes"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="CRQ-0001"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+</rem:tr>
+</rem:traceabilityMatrix>
+<rem:traceabilityMatrix
+ oid = "TRM-0002">
+<rem:name>
+Requisitos funcionales</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:tr>
+<rem:th/>
+<rem:th oid ="OBJ-0001"/>
+<rem:th oid ="OBJ-0002"/>
+<rem:th oid ="OBJ-0003"/>
+<rem:th oid ="OBJ-0004"/>
+<rem:th oid ="IRQ-0001"/>
+<rem:th oid ="IRQ-0002"/>
+<rem:th oid ="IRQ-0003"/>
+<rem:th oid ="IRQ-0004"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="UC-0001"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="UC-0002"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="UC-0003"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="UC-0004"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="UC-0005"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="UC-0006"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="UC-0007"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="UC-0008"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="yes"/>
+</rem:tr>
+</rem:traceabilityMatrix>
+<rem:traceabilityMatrix
+ oid = "TRM-0003">
+<rem:name>
+Requisitos no funcionales</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:tr>
+<rem:th/>
+<rem:th oid ="OBJ-0001"/>
+<rem:th oid ="OBJ-0002"/>
+<rem:th oid ="OBJ-0003"/>
+<rem:th oid ="OBJ-0004"/>
+</rem:tr>
+<rem:tr>
+<rem:th oid ="NFR-0001"/>
+<rem:td mark ="yes"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+<rem:td mark ="no"/>
+</rem:tr>
+</rem:traceabilityMatrix>
+</rem:section>
+<rem:section
+ oid = "SEC-0013">
+<rem:name>
+Glosario de términos</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>1</rem:level>
+<rem:number>7 </rem:number>
+<rem:glossaryItem
+ oid = "GLO-0009">
+<rem:name>
+<rem:ref oid="GLO-0009">Aval</rem:ref>, <rem:ref oid="GLO-0009">avales</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>19</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0003 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>Firma que se pone al pie de una letra u otro documento de crédito, para responder de su pago en caso de no efectuarlo la persona principalmente obligada a él.</rem:text>
+</rem:glossaryItem>
+<rem:glossaryItem
+ oid = "GLO-0010">
+<rem:name>
+<rem:ref oid="GLO-0010">Avalista</rem:ref>, <rem:ref oid="GLO-0010">avalistas</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>19</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0003 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>Persona que avala.</rem:text>
+</rem:glossaryItem>
+<rem:glossaryItem
+ oid = "GLO-0011">
+<rem:name>
+<rem:ref oid="GLO-0011">Declaración de la Renta</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>19</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0003 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>La que se hace a la Administración tributaria manifestando la naturaleza y circunstancias del hecho imponible.</rem:text>
+</rem:glossaryItem>
+<rem:glossaryItem
+ oid = "GLO-0012">
+<rem:name>
+<rem:ref oid="GLO-0012">Nómina</rem:ref>, <rem:ref oid="GLO-0012">nóminas</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>19</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0003 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>Relación nominal de los individuos que en una oficina pública o particular han de percibir haberes y justificar con su firma haberlos recibido.</rem:text>
+</rem:glossaryItem>
+<rem:glossaryItem
+ oid = "GLO-0013">
+<rem:name>
+<rem:ref oid="GLO-0013">UDO</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>19</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0003 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>(O Departamento de Análisis de <rem:ref oid="GLO-0016">Riesgos</rem:ref>) Departamento de una instritución bancaria dedicado al análisis de los posibles <rem:ref oid="GLO-0016">riesgos</rem:ref> antes de la concesión de un crédito o un <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:text>
+</rem:glossaryItem>
+<rem:glossaryItem
+ oid = "GLO-0014">
+<rem:name>
+<rem:ref oid="GLO-0014">Notario</rem:ref>, <rem:ref oid="GLO-0014">notarios</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>19</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0003 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>Funcionario público autorizado para dar fe de los contratos, testamentos y otros actos extrajudiciales, conforme a las leyes. <br/><br/></rem:text>
+</rem:glossaryItem>
+<rem:glossaryItem
+ oid = "GLO-0015">
+<rem:name>
+<rem:ref oid="GLO-0015">Préstamo</rem:ref>, <rem:ref oid="GLO-0015">préstamos</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>19</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0003 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés. </rem:text>
+</rem:glossaryItem>
+<rem:glossaryItem
+ oid = "GLO-0016">
+<rem:name>
+<rem:ref oid="GLO-0016">Riesgo</rem:ref>, <rem:ref oid="GLO-0016">riesgos</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>19</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0003 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>El <rem:ref oid="GLO-0016">riesgo</rem:ref> de crédito es la posible pérdida que asume un agente económico como consecuencia del incumplimiento de las obligaciones contractuales que incumben a las contrapartes con las que se relaciona. El concepto se relaciona habitualmente con las instituciones financieras y los bancos, pero afecta también a empresas y organismos de otros sectores</rem:text>
+</rem:glossaryItem>
+<rem:glossaryItem
+ oid = "GLO-0017">
+<rem:name>
+<rem:ref oid="GLO-0017">Vida Laboral</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>19</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0003 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>Es el tiempo acumulado por un trabajador durante la vida activa que haya trabajado en una o varias empresas u organismos oficiales.</rem:text>
+</rem:glossaryItem>
+<rem:glossaryItem
+ oid = "GLO-0018">
+<rem:name>
+<rem:ref oid="GLO-0018">Asesor</rem:ref>, <rem:ref oid="GLO-0018">asesores</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>19</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text>(financiero) es el profesional que ayuda a descubrir las necesidades financieras, analizando circunstancias pasadas, presentes y futuras de su cliente, teniendo en cuenta la edad, su patrimonio  disponible, su tipo impositivo, su situación profesional y familiar, y el resto de inversiones que pueda disponer. Una vez analizado su perfil de <rem:ref oid="GLO-0016">riesgo</rem:ref> y sus necesidades, el <rem:ref oid="GLO-0018">asesor</rem:ref> llevará a cabo sus recomendaciones de inversión, asesorándole según sus circunstancias y necesidades vayan cambiando y adaptándolas al momento actual.</rem:text>
+</rem:glossaryItem>
+</rem:section>
+<rem:section
+ oid = "SEC-0021">
+<rem:name>
+Actas de reuniones</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>1</rem:level>
+<rem:number>A </rem:number>
+<rem:meeting
+ oid = "MET-0001">
+<rem:name>
+Primera Reunión</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>15</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0002 "/>
+<rem:sources stakeholders ="STK-0005 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>3</rem:month>
+<rem:day>12</rem:day>
+</rem:date>
+<rem:time>
+<rem:hour>11</rem:hour>
+<rem:minute>30</rem:minute>
+</rem:time>
+<rem:place>Oficinas del Banco</rem:place>
+<rem:results>La reunión comienza a las 11:30 en las oficinas de Puerta de Jerez con José Antonio Jiménez Budia, Director de Control de Gestión del Banco Santander en Andalucía. <br/>El grupo se presenta ante José Antonio J. B. y, a continuación, éste expone al grupo conceptos básicos de la concesión de <rem:ref oid="GLO-0015">préstamos</rem:ref> del banco a particulares y su proceso de forma simplificada.<br/>A las 11:50, José Antonio J. B. acompaña al grupo a las oficinas de la Avda. de la Constitución para hablar con María Alba Jorba Escribano, Analista de <rem:ref oid="GLO-0016">Riesgos</rem:ref>, para explicar al grupo el proceso de concesión de <rem:ref oid="GLO-0015">préstamos</rem:ref> de forma más detallada.<br/>A las 12:00, comienza la segunda parte de la reunión, con María Alba J. E., presentándose el grupo ante la misma. Después, María Alba J. E. explica al grupo los pasos concretos del proceso de concesión de <rem:ref oid="GLO-0015">préstamos</rem:ref> a particulares.<br/>A las 12:45, finaliza la reunión.</rem:results>
+	<rem:attenders stakeholders ="STK-0001 STK-0002 STK-0003 STK-0004 STK-0005 STK-0007 "/>
+</rem:meeting>
+</rem:section>
+<rem:section
+ oid = "SEC-0022">
+<rem:name>
+Documentación aportada</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>11</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>1</rem:level>
+<rem:number>B </rem:number>
+</rem:section>
+</rem:c_requirementsSpecification>
+<rem:d_requirementsSpecification oid = "DRS-0002">
+<rem:name>Documento de Análisis del Sistema</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>6</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno
+</rem:comments>
+	 <rem:preparedFor organizations = "ORG-0001 "/>
+	 <rem:preparedBy organizations = "ORG-0002 "/>
+<rem:section
+ oid = "SEC-0025">
+<rem:name>
+Introducción</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>15</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>1</rem:level>
+<rem:number>1 </rem:number>
+<rem:paragraph
+ oid = "PRG-0007">
+<rem:name>
+Introducción</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>15</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:text></rem:text>
+</rem:paragraph>
+</rem:section>
+<rem:section
+ oid = "SEC-0026">
+<rem:name>
+Modelo estático</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>15</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>1</rem:level>
+<rem:number>2 </rem:number>
+<rem:graphicFile
+ oid = "GRF-0013">
+<rem:name>
+Modelo estático del subsistema gestión de <rem:ref oid="GLO-0015">préstamos</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0004 "/>
+<rem:sources stakeholders ="STK-0005 STK-0006 STK-0007 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:fileName>
+<![CDATA[.\img\uml.wmf]]>
+</rem:fileName>
+</rem:graphicFile>
+<rem:section
+ oid = "SEC-0046">
+<rem:name>
+Subsistema de <rem:ref oid="GLO-0015">Préstamos</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0004 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>2</rem:level>
+<rem:number>2.1 </rem:number>
+<rem:objectType
+ oid = "TYP-0001">
+<rem:name>
+<rem:ref oid="GLO-0015">Préstamo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+un <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:description>
+<rem:attribute oid = "ATT-0087" baseType = "PVT-0004">
+<rem:name>
+númeroPréstamo</rem:name>
+<rem:description>
+el identificador del presupuesto.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isConstant/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0088" baseType = "VAL-0004">
+<rem:name>
+autorizado</rem:name>
+<rem:description>
+si un <rem:ref oid="GLO-0015">préstamo</rem:ref> está o no autorizado.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+<rem:expression>
+<rem:natural>
+<rem:tbd/></rem:natural>
+<rem:ocl><![CDATA[false]]></rem:ocl>
+</rem:expression>
+</rem:attribute>
+<rem:attribute oid = "ATT-0089" baseType = "VAL-0004">
+<rem:name>
+formalizado</rem:name>
+<rem:description>
+si un <rem:ref oid="GLO-0015">préstamo</rem:ref> está o no formalizado.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+<rem:expression>
+<rem:natural>
+<rem:tbd/></rem:natural>
+<rem:ocl><![CDATA[false]]></rem:ocl>
+</rem:expression>
+</rem:attribute>
+<rem:attribute oid = "ATT-0090" baseType = "PVT-0005">
+<rem:name>
+fechaSolicitud</rem:name>
+<rem:description>
+la fecha de solicitud del <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0091" baseType = "PVT-0005">
+<rem:name>
+fechaInicio</rem:name>
+<rem:description>
+la fecha en que se concede el <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0092" baseType = "PVT-0005">
+<rem:name>
+fechaFin</rem:name>
+<rem:description>
+la fecha en la que se finalizará el <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0093" baseType = "PVT-0002">
+<rem:name>
+plazos</rem:name>
+<rem:description>
+el número de plazos a pagar por el cliente.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0094" baseType = "VAL-0002">
+<rem:name>
+tipoDeInterés</rem:name>
+<rem:description>
+la clase de tipo de interés.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0095" baseType = "PVT-0001">
+<rem:name>
+importe</rem:name>
+<rem:description>
+el importe total por el que se solicita el <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0096" baseType = "PVT-0001">
+<rem:name>
+póliza</rem:name>
+<rem:description>
+el documento firmado del <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:component oid = "COM-0097" baseType = "TYP-0009">
+<rem:name>
+control</rem:name>
+<rem:description>
+el control del <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:description>
+<rem:isSequence/>
+<rem:multiplicity>
+<rem:lowerBound>
+0</rem:lowerBound>
+<rem:upperBound>
+1</rem:upperBound>
+</rem:multiplicity>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:component>
+<rem:component oid = "COM-0098" baseType = "TYP-0010">
+<rem:name>
+cancelación</rem:name>
+<rem:description>
+la cancelación del <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:description>
+<rem:isSet/>
+<rem:multiplicity>
+<rem:lowerBound>
+0</rem:lowerBound>
+<rem:upperBound>
+1</rem:upperBound>
+</rem:multiplicity>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:component>
+<rem:disjointSubtypes/>
+</rem:objectType>
+<rem:objectType
+ oid = "TYP-0002">
+<rem:name>
+Persona</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+una persona.</rem:description>
+<rem:attribute oid = "ATT-0099" baseType = "PVT-0004">
+<rem:name>
+nombre</rem:name>
+<rem:description>
+el nombre de la persona.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0100" baseType = "PVT-0004">
+<rem:name>
+dni</rem:name>
+<rem:description>
+el dni de la persona.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0101" baseType = "PVT-0004">
+<rem:name>
+dirección</rem:name>
+<rem:description>
+la dirección de la persona.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0102" baseType = "PVT-0002">
+<rem:name>
+teléfono</rem:name>
+<rem:description>
+el teléfono de la persona.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:disjointSubtypes/>
+</rem:objectType>
+<rem:objectType
+ oid = "TYP-0003">
+<rem:name>
+Sucursal</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+una sucursal del banco.</rem:description>
+<rem:attribute oid = "ATT-0103" baseType = "PVT-0004">
+<rem:name>
+dirección</rem:name>
+<rem:description>
+la dirección de la sucursal.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0104" baseType = "PVT-0004">
+<rem:name>
+ciudad</rem:name>
+<rem:description>
+la ciudad de la sucursal.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0105" baseType = "PVT-0004">
+<rem:name>
+país</rem:name>
+<rem:description>
+el país de la sucursal.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:disjointSubtypes/>
+</rem:objectType>
+<rem:objectType
+ supertype = "TYP-0002" oid = "TYP-0004">
+<rem:name>
+Cliente</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+un cliente del banco.</rem:description>
+<rem:invariantExpression
+ oid = "INV-0146">
+<rem:name>Unicidad préstamos hipotecarios</rem:name>
+<rem:expression>
+<rem:natural>
+Un cliente sólo puede tener un <rem:ref oid="GLO-0015">préstamo</rem:ref> hipotecario activo.</rem:natural>
+<rem:ocl><![CDATA[self.prestamosActivos = True implies not exists (self.prestamoHipotecario)]]></rem:ocl>
+</rem:expression>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:invariantExpression>
+<rem:attribute oid = "ATT-0106" baseType = "VAL-0004">
+<rem:name>
+préstamosActivos</rem:name>
+<rem:description>
+si el cliente tiene o no algún <rem:ref oid="GLO-0015">préstamo</rem:ref> en activo.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+<rem:expression>
+<rem:natural>
+<rem:tbd/></rem:natural>
+<rem:ocl><![CDATA[false]]></rem:ocl>
+</rem:expression>
+</rem:attribute>
+<rem:attribute oid = "ATT-0107" baseType = "PVT-0001">
+<rem:name>
+númeroCuenta</rem:name>
+<rem:description>
+la cuenta bancaria asociada al cliente.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:disjointSubtypes/>
+</rem:objectType>
+<rem:objectType
+ supertype = "TYP-0002" oid = "TYP-0005">
+<rem:name>
+<rem:ref oid="GLO-0010">Avalista</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+el <rem:ref oid="GLO-0010">avalista</rem:ref> de un/os <rem:ref oid="GLO-0015">préstamo</rem:ref>/s.</rem:description>
+<rem:disjointSubtypes/>
+</rem:objectType>
+<rem:objectType
+ supertype = "TYP-0002" oid = "TYP-0006">
+<rem:name>
+<rem:ref oid="GLO-0018">Asesor</rem:ref> Financiero</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+el <rem:ref oid="GLO-0018">asesor</rem:ref> que atiende a un cliente en la gestión de un <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:description>
+<rem:disjointSubtypes/>
+</rem:objectType>
+<rem:objectType
+ oid = "TYP-0007">
+<rem:name>
+Pago</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+el pago de un plazo.</rem:description>
+<rem:attribute oid = "ATT-0108" baseType = "PVT-0002">
+<rem:name>
+númeroPlazo</rem:name>
+<rem:description>
+el plazo del que trata el pago.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0109" baseType = "VAL-0004">
+<rem:name>
+pagado</rem:name>
+<rem:description>
+si el plazo fue o no pagado.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0110" baseType = "PVT-0001">
+<rem:name>
+intereses</rem:name>
+<rem:description>
+los intereses aportados en el pago.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0111" baseType = "PVT-0001">
+<rem:name>
+importe</rem:name>
+<rem:description>
+el importe del pago.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:disjointSubtypes/>
+</rem:objectType>
+<rem:objectType
+ oid = "TYP-0008">
+<rem:name>
+Documentación</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+los documentos que se aportan durante la vida del <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:description>
+<rem:attribute oid = "ATT-0112" baseType = "VAL-0001">
+<rem:name>
+escaner</rem:name>
+<rem:description>
+los documentos aportados.</rem:description>
+<rem:isBag/>
+<rem:multiplicity>
+<rem:lowerBound>
+1</rem:lowerBound>
+<rem:upperBound>
+*</rem:upperBound>
+</rem:multiplicity>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:disjointSubtypes/>
+</rem:objectType>
+<rem:objectType
+ oid = "TYP-0009">
+<rem:name>
+Control</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+el control de un <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:description>
+<rem:attribute oid = "ATT-0114" baseType = "PVT-0001">
+<rem:name>
+importeRestante</rem:name>
+<rem:description>
+el importe que aún debe el cliente.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0115" baseType = "PVT-0001">
+<rem:name>
+interés</rem:name>
+<rem:description>
+el interés establecido.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0116" baseType = "PVT-0005">
+<rem:name>
+fechaPróximoPago</rem:name>
+<rem:description>
+la fecha del próximo pago a realizar.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0117" baseType = "VAL-0003">
+<rem:name>
+situaciónCliente</rem:name>
+<rem:description>
+la situación actual del cliente según se encuentre o no al día de los pagos.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+<rem:expression>
+<rem:natural>
+<rem:tbd/></rem:natural>
+<rem:ocl><![CDATA[regular]]></rem:ocl>
+</rem:expression>
+</rem:attribute>
+<rem:disjointSubtypes/>
+</rem:objectType>
+<rem:objectType
+ oid = "TYP-0010">
+<rem:name>
+Cancelación</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+la cancelación de un <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:description>
+<rem:attribute oid = "ATT-0118" baseType = "PVT-0005">
+<rem:name>
+fechaCancelación</rem:name>
+<rem:description>
+la fecha en la que se cancela el <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0119" baseType = "PVT-0001">
+<rem:name>
+importeRestante</rem:name>
+<rem:description>
+el importe de la cancelación.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0120" baseType = "PVT-0001">
+<rem:name>
+importeTasas</rem:name>
+<rem:description>
+el importe de las tasas por cancelación.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0121" baseType = "VAL-0004">
+<rem:name>
+cancelado</rem:name>
+<rem:description>
+si está o no cancelado el <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+<rem:expression>
+<rem:natural>
+<rem:tbd/></rem:natural>
+<rem:ocl><![CDATA[false]]></rem:ocl>
+</rem:expression>
+</rem:attribute>
+<rem:disjointSubtypes/>
+</rem:objectType>
+<rem:objectType
+ supertype = "TYP-0001" oid = "TYP-0011">
+<rem:name>
+P. Hipotecario</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+un <rem:ref oid="GLO-0015">préstamo</rem:ref> hipotecario.</rem:description>
+<rem:disjointSubtypes/>
+</rem:objectType>
+<rem:objectType
+ supertype = "TYP-0001" oid = "TYP-0012">
+<rem:name>
+P. Financiero</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+un <rem:ref oid="GLO-0015">préstamo</rem:ref> financiero.</rem:description>
+<rem:disjointSubtypes/>
+</rem:objectType>
+<rem:userDefinedValueType
+ oid = "VAL-0001">
+<rem:name>
+Documento</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+un enumerado de los tipos documentos que se pueden aportar.</rem:description>
+<rem:attribute oid = "ATT-0122" baseType = "PVT-0004">
+<rem:name>
+<rem:ref oid="GLO-0012">nómina</rem:ref></rem:name>
+<rem:description>
+la <rem:ref oid="GLO-0012">nómina</rem:ref> de una persona.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0123" baseType = "PVT-0004">
+<rem:name>
+declaraciónRenta</rem:name>
+<rem:description>
+la <rem:ref oid="GLO-0011">declaración de la renta</rem:ref> de una persona.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0124" baseType = "PVT-0004">
+<rem:name>
+vidaLaboral</rem:name>
+<rem:description>
+la <rem:ref oid="GLO-0017">vida laboral</rem:ref> de una persona.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0125" baseType = "PVT-0004">
+<rem:name>
+títulosPropiedad</rem:name>
+<rem:description>
+los títulos de propiedad que aporta una persona.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0126" baseType = "PVT-0004">
+<rem:name>
+pólizaPréstamo</rem:name>
+<rem:description>
+la póliza del <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:definition>
+PD
+</rem:definition>
+</rem:userDefinedValueType>
+<rem:userDefinedValueType
+ oid = "VAL-0002">
+<rem:name>
+Tipo Interés</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+un enumerado de los tipos de interés posibles.</rem:description>
+<rem:attribute oid = "ATT-0127" baseType = "PVT-0004">
+<rem:name>
+fijo</rem:name>
+<rem:description>
+tipo de interés fijo.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0128" baseType = "PVT-0004">
+<rem:name>
+variable</rem:name>
+<rem:description>
+tipo de interés variable.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:definition>
+PD
+</rem:definition>
+</rem:userDefinedValueType>
+<rem:userDefinedValueType
+ oid = "VAL-0003">
+<rem:name>
+Situación</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+un enumerado de las posibles situaciones en las que se puede encontrar un cliente.</rem:description>
+<rem:attribute oid = "ATT-0129" baseType = "PVT-0004">
+<rem:name>
+regular</rem:name>
+<rem:description>
+situación regular.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0130" baseType = "PVT-0004">
+<rem:name>
+irregular</rem:name>
+<rem:description>
+situación irregular.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0131" baseType = "PVT-0004">
+<rem:name>
+morosidad</rem:name>
+<rem:description>
+situación de morosidad.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0132" baseType = "PVT-0004">
+<rem:name>
+víaPenal</rem:name>
+<rem:description>
+que el <rem:ref oid="GLO-0015">préstamo</rem:ref> se encuentra en la vía penal.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:definition>
+PD
+</rem:definition>
+</rem:userDefinedValueType>
+<rem:userDefinedValueType
+ oid = "VAL-0004">
+<rem:name>
+Boolean</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+un enumerado del tipo boolean.</rem:description>
+<rem:attribute oid = "ATT-0133" baseType = "PVT-0004">
+<rem:name>
+true</rem:name>
+<rem:description>
+que la condición es cierta.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:attribute oid = "ATT-0134" baseType = "PVT-0004">
+<rem:name>
+false</rem:name>
+<rem:description>
+que la condición es falsa.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:isVariable/>
+</rem:attribute>
+<rem:definition>
+PD
+</rem:definition>
+</rem:userDefinedValueType>
+</rem:section>
+</rem:section>
+<rem:section
+ oid = "SEC-0027">
+<rem:name>
+Modelo dinámico</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>15</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>1</rem:level>
+<rem:number>3 </rem:number>
+<rem:section
+ oid = "SEC-0031">
+<rem:name>
+Subsistema de <rem:ref oid="GLO-0015">Préstamos</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>6</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>2</rem:level>
+<rem:number>3.1 </rem:number>
+<rem:section
+ oid = "SEC-0034">
+<rem:name>
+Alta de Cliente</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>6</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0004 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>3</rem:level>
+<rem:number>3.1.1 </rem:number>
+<rem:graphicFile
+ oid = "GRF-0009">
+<rem:name>
+Alta de Cliente</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>6</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0004 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:fileName>
+<![CDATA[.\img\DiagramaSecuencia_Alta de cliente.wmf]]>
+</rem:fileName>
+</rem:graphicFile>
+</rem:section>
+<rem:section
+ oid = "SEC-0035">
+<rem:name>
+Cancelar <rem:ref oid="GLO-0015">Préstamo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>6</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0004 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>3</rem:level>
+<rem:number>3.1.2 </rem:number>
+<rem:graphicFile
+ oid = "GRF-0010">
+<rem:name>
+Cancelar <rem:ref oid="GLO-0015">Préstamo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>6</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0004 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:fileName>
+<![CDATA[.\img\DiagramaSecuencia_CancelarPrestamo.wmf]]>
+</rem:fileName>
+</rem:graphicFile>
+</rem:section>
+<rem:section
+ oid = "SEC-0038">
+<rem:name>
+Comprobar Registro Banco de España</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>3</rem:level>
+<rem:number>3.1.3 </rem:number>
+<rem:graphicFile
+ oid = "GRF-0014">
+<rem:name>
+Comprobar Registro Banco de España</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:fileName>
+<![CDATA[.\img\comprobar registro b españa.wmf]]>
+</rem:fileName>
+</rem:graphicFile>
+</rem:section>
+<rem:section
+ oid = "SEC-0039">
+<rem:name>
+Registrar Aceptación <rem:ref oid="GLO-0015">Préstamo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>3</rem:level>
+<rem:number>3.1.4 </rem:number>
+<rem:graphicFile
+ oid = "GRF-0015">
+<rem:name>
+Registrar Aceptación <rem:ref oid="GLO-0015">Préstamo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:fileName>
+<![CDATA[.\img\aceptacion prestamo.wmf]]>
+</rem:fileName>
+</rem:graphicFile>
+</rem:section>
+<rem:section
+ oid = "SEC-0042">
+<rem:name>
+Alta de <rem:ref oid="GLO-0015">Préstamo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0003 "/>
+<rem:sources stakeholders ="STK-0005 STK-0007 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>3</rem:level>
+<rem:number>3.1.5 </rem:number>
+<rem:graphicFile
+ oid = "GRF-0016">
+<rem:name>
+Alta de <rem:ref oid="GLO-0015">Préstamo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0003 "/>
+<rem:sources stakeholders ="STK-0005 STK-0007 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:fileName>
+<![CDATA[.\img\altaPrestamo.wmf]]>
+</rem:fileName>
+</rem:graphicFile>
+</rem:section>
+<rem:section
+ oid = "SEC-0045">
+<rem:name>
+Formalizar <rem:ref oid="GLO-0015">Préstamo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0003 "/>
+<rem:sources stakeholders ="STK-0005 STK-0007 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>3</rem:level>
+<rem:number>3.1.6 </rem:number>
+<rem:graphicFile
+ oid = "GRF-0017">
+<rem:name>
+Formalizar <rem:ref oid="GLO-0015">Préstamo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0003 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:fileName>
+<![CDATA[.\img\formalizarPrestamo.wmf]]>
+</rem:fileName>
+</rem:graphicFile>
+</rem:section>
+</rem:section>
+</rem:section>
+<rem:section
+ oid = "SEC-0028">
+<rem:name>
+Modelo funcional</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>15</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>1</rem:level>
+<rem:number>4 </rem:number>
+<rem:section
+ oid = "SEC-0032">
+<rem:name>
+Subsistema de <rem:ref oid="GLO-0015">Préstamos</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>6</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>2</rem:level>
+<rem:number>4.1 </rem:number>
+<rem:section
+ oid = "SEC-0036">
+<rem:name>
+Alta de Cliente</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>6</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0004 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>3</rem:level>
+<rem:number>4.1.1 </rem:number>
+<rem:systemOperation
+ oid = "SOP-0001">
+<rem:name>
+Alta de Cliente</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>6</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0004 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+Da de alta un nuevo cliente, necesario para pedir un <rem:ref oid="GLO-0015">préstamo</rem:ref>. Hacen falta los datos comunes de una persona, tales como nombre,dni, dirección y telefono.</rem:description>
+<rem:resultType>Set(Tuple(String,String,String,Integer))</rem:resultType>
+<rem:parameter oid = "PAR-0151" baseType = "TYP-0004">
+<rem:name>
+idCliente</rem:name>
+<rem:description>
+el cliente es dado de alta en el banco para poder pedir un <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:parameter>
+<rem:preconditionExpression oid = "PRE-0152">
+<rem:name>No existe el cliente</rem:name>
+<rem:expression>
+<rem:natural>
+el cliente no existe en la base de datos.</rem:natural>
+<rem:ocl><![CDATA[Cliente.allInstances - > exclude(idCliente)]]></rem:ocl>
+</rem:expression>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:preconditionExpression>
+<rem:postconditionExpression oid = "POS-0153">
+<rem:name>Cliente dado de alta</rem:name>
+<rem:expression>
+<rem:natural>
+el cliente ya esta dado de alta en la base de datos.</rem:natural>
+<rem:ocl><![CDATA[let cliente: Cliente.allInstances() -> any (c|c.idCliente = idCliente)]]></rem:ocl>
+</rem:expression>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:postconditionExpression>
+</rem:systemOperation>
+</rem:section>
+<rem:section
+ oid = "SEC-0037">
+<rem:name>
+Cancelar <rem:ref oid="GLO-0015">Préstamo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>6</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0004 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>3</rem:level>
+<rem:number>4.1.2 </rem:number>
+<rem:systemOperation
+ oid = "SOP-0002">
+<rem:name>
+Cancelar <rem:ref oid="GLO-0015">Préstamo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>6</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0004 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+Despues de que el sistema nos proporciones las tasas y el total a pagar por el cliente, el <rem:ref oid="GLO-0018">asesor</rem:ref> formaliza la cancelacion del <rem:ref oid="GLO-0015">préstamo</rem:ref> guardando la fecha, poniendo el <rem:ref oid="GLO-0015">préstamo</rem:ref> como cancelado e informando al cliente de que la operación ha ido bien.</rem:description>
+<rem:resultType>Boolean</rem:resultType>
+<rem:parameter oid = "PAR-0147" baseType = "TYP-0004">
+<rem:name>
+idCliente</rem:name>
+<rem:description>
+identificador único de cliente.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:parameter>
+<rem:preconditionExpression oid = "PRE-0149">
+<rem:name>Existencia de Préstamo</rem:name>
+<rem:expression>
+<rem:natural>
+el <rem:ref oid="GLO-0015">préstamo</rem:ref> existe y queda dinero por pagar.</rem:natural>
+<rem:ocl><![CDATA[Cliente.prestamo.allInstances()-> one (c| c.númeroPréstamo=númeroPréstamo)]]></rem:ocl>
+</rem:expression>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:preconditionExpression>
+<rem:postconditionExpression oid = "POS-0150">
+<rem:name>Cancelación de Préstamo</rem:name>
+<rem:expression>
+<rem:natural>
+el <rem:ref oid="GLO-0015">préstamo</rem:ref> es cancelado y se procede a formalizarlo.</rem:natural>
+<rem:ocl><![CDATA[let prestamo: Prestamo.allInstances() -> any (p|p.númeroPréstamo = númeroPréstamo)
+in prestamo.formalizado = True]]></rem:ocl>
+</rem:expression>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:postconditionExpression>
+</rem:systemOperation>
+</rem:section>
+<rem:section
+ oid = "SEC-0041">
+<rem:name>
+Registrar Aceptación <rem:ref oid="GLO-0015">Préstamo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>3</rem:level>
+<rem:number>4.1.3 </rem:number>
+<rem:systemOperation
+ oid = "SOP-0003">
+<rem:name>
+RegistrarAceptación</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:description>
+Se autoriza un <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:description>
+<rem:parameter oid = "PAR-0066" baseType = "PVT-0004">
+<rem:name>
+númeroPréstamo</rem:name>
+<rem:description>
+el identificador único de un <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:parameter>
+<rem:preconditionExpression oid = "PRE-0068">
+<rem:name>Existencia de Préstamo</rem:name>
+<rem:expression>
+<rem:natural>
+el <rem:ref oid="GLO-0015">préstamo</rem:ref> existe y no está autorizado.</rem:natural>
+<rem:ocl><![CDATA[Prestamo.allInstances()-> one (p| p.númeroPréstamo=númeroPréstamo and p.autorizado=false)]]></rem:ocl>
+</rem:expression>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:preconditionExpression>
+<rem:postconditionExpression oid = "POS-0069">
+<rem:name>Autorización de préstamo</rem:name>
+<rem:expression>
+<rem:natural>
+el <rem:ref oid="GLO-0015">préstamo</rem:ref> es autorizado.</rem:natural>
+<rem:ocl><![CDATA[let prestamo: Prestamo.allInstances() -> any (p|p.númeroPréstamo = númeroPréstamo)
+in prestamo.autorizado = True]]></rem:ocl>
+</rem:expression>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:postconditionExpression>
+</rem:systemOperation>
+<rem:systemOperation
+ oid = "SOP-0004">
+<rem:name>
+ConsultarPréstamo</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>8</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 "/>
+<rem:comments>
+Se supone que existe un atributo identificador por defecto de los tipos Cliente y <rem:ref oid="GLO-0010">Avalista</rem:ref> denominado id.</rem:comments>
+<rem:description>
+Se obtienen los datos de un <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:description>
+<rem:resultType>Tuple (Integer, Integer, Date)</rem:resultType>
+<rem:parameter oid = "PAR-0070" baseType = "PVT-0004">
+<rem:name>
+númeroPréstamo</rem:name>
+<rem:description>
+el identificador único de un <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:parameter>
+<rem:preconditionExpression oid = "PRE-0071">
+<rem:name>Existencia del préstamo</rem:name>
+<rem:expression>
+<rem:natural>
+el <rem:ref oid="GLO-0015">préstamo</rem:ref> existe.</rem:natural>
+<rem:ocl><![CDATA[Préstamo.allInstances() -> one (p| p.númeroPréstamo = númeroPréstamo)]]></rem:ocl>
+</rem:expression>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:preconditionExpression>
+<rem:postconditionExpression oid = "POS-0072">
+<rem:name>Devuelve el préstamo</rem:name>
+<rem:expression>
+<rem:natural>
+se devuelven los datos del <rem:ref oid="GLO-0015">préstamos</rem:ref>.</rem:natural>
+<rem:ocl><![CDATA[let prestamo: Prestamo.allInstances() -> any (p|p.númeroPréstamo= númeroPréstamo) in result = Tuple(idCliente:Integer=idC, idAvalista:Integer=idA,fechaSolicitud:Date=fechaS)]]></rem:ocl>
+</rem:expression>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:postconditionExpression>
+</rem:systemOperation>
+</rem:section>
+<rem:section
+ oid = "SEC-0043">
+<rem:name>
+Alta de <rem:ref oid="GLO-0015">Préstamo</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0003 "/>
+<rem:sources stakeholders ="STK-0005 STK-0007 "/>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>3</rem:level>
+<rem:number>4.1.4 </rem:number>
+<rem:systemOperation
+ oid = "SOP-0005">
+<rem:name>
+AltaPréstamo</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>9</rem:day>
+</rem:date>
+</rem:version>
+<rem:authors stakeholders ="STK-0001 STK-0003 "/>
+<rem:comments>
+Se supone que existe un atributo identificador por defecto del tipo Cliente denominado id.</rem:comments>
+<rem:description>
+Se da de alta un nuevo <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:description>
+<rem:resultType>String</rem:resultType>
+<rem:parameter oid = "PAR-0082" baseType = "PVT-0001">
+<rem:name>
+idCliente</rem:name>
+<rem:description>
+el identificador único de un cliente.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:parameter>
+<rem:parameter oid = "PAR-0083" baseType = "PVT-0001">
+<rem:name>
+importe</rem:name>
+<rem:description>
+el importe por el que se solicita el <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:description>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:parameter>
+<rem:preconditionExpression oid = "PRE-0085">
+<rem:name>Existencia del cliente</rem:name>
+<rem:expression>
+<rem:natural>
+el cliente existe.</rem:natural>
+<rem:ocl><![CDATA[Cliente.allInstances()->one(c|c.idCliente=idCliente)]]></rem:ocl>
+</rem:expression>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:preconditionExpression>
+<rem:preconditionExpression oid = "PRE-0144">
+<rem:name>Existencia del Asesor</rem:name>
+<rem:expression>
+<rem:natural>
+el <rem:ref oid="GLO-0018">asesor</rem:ref> existe.</rem:natural>
+<rem:ocl><![CDATA[Asesor Financiero.allInstances()->one(a|a.idAsesor=idAsesor)]]></rem:ocl>
+</rem:expression>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:preconditionExpression>
+<rem:postconditionExpression oid = "POS-0086">
+<rem:name>Creación del préstamo</rem:name>
+<rem:expression>
+<rem:natural>
+se crea un nuevo <rem:ref oid="GLO-0015">préstamo</rem:ref>.</rem:natural>
+<rem:ocl><![CDATA[let cliente:Cliente.allInstances()->any(c|c.idCliente=idCliente) 
+asesor:Asesor.allInstances()-<any(a|a.idAsesor=idAsesor) prestamo:Prestamo.allInstances()->any(p|p.númeroPréstamo=númeroPréstamo) in prestamo.oclIsNew() = True and prestamo.importe=importe and prestamo.fechaSolicitud=Date.Today() and prestamo.Cliente=cliente and 
+prestamo.AsesorFinanciero= asesor and asesor.prestamo->includes(prestamo) and cliente.prestamo->includes(prestamo) and result=númeroPréstamo]]></rem:ocl>
+</rem:expression>
+<rem:comments>
+Ninguno</rem:comments>
+</rem:postconditionExpression>
+</rem:systemOperation>
+</rem:section>
+</rem:section>
+</rem:section>
+<rem:section
+ oid = "SEC-0029">
+<rem:name>
+Prototipos de interfaz de usuario</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>15</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>1</rem:level>
+<rem:number>5 </rem:number>
+<rem:section
+ oid = "SEC-0033">
+<rem:name>
+Subsistema de <rem:ref oid="GLO-0015">Préstamos</rem:ref></rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>6</rem:month>
+<rem:day>6</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno</rem:comments>
+<rem:level>2</rem:level>
+<rem:number>5.1 </rem:number>
+</rem:section>
+</rem:section>
+</rem:d_requirementsSpecification>
+<rem:defectsSpecification oid = "DFS-0003">
+<rem:name>Registro de Conflictos y Defectos</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>6</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno
+</rem:comments>
+</rem:defectsSpecification>
+<rem:changeRequestsSpecification oid = "CHS-0004">
+<rem:name>Registro de Peticiones de Cambio</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2010</rem:year>
+<rem:month>5</rem:month>
+<rem:day>6</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Ninguno
+</rem:comments>
+</rem:changeRequestsSpecification>
+<rem:trace source = "OBJ-0002"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0003"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "OBJ-0004"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0001"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0003"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0004"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0001"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0003"  target = "GLO-0014" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0002"  target = "GLO-0018" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "SOP-0001"  target = "UC-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "SOP-0002"  target = "UC-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "SOP-0004"  target = "UC-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "SOP-0003"  target = "UC-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0007"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0008"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "GRF-0016"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "SOP-0005"  target = "UC-0007" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "SOP-0002"  target = "TYP-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "SOP-0003"  target = "TYP-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "SOP-0004"  target = "TYP-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "TYP-0009"  target = "TYP-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "TYP-0010"  target = "TYP-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "SOP-0005"  target = "TYP-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0002"  target = "IRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0003"  target = "IRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0004"  target = "IRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0006"  target = "IRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0007"  target = "IRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0008"  target = "IRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "TYP-0007"  target = "IRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "TYP-0009"  target = "IRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "TYP-0010"  target = "IRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "TYP-0001"  target = "IRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "TYP-0011"  target = "IRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "TYP-0012"  target = "IRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0004"  target = "IRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0004"  target = "IRQ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0004"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "TYP-0005"  target = "TYP-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "SOP-0001"  target = "TYP-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "TYP-0006"  target = "TYP-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "TYP-0002"  target = "IRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "TYP-0002"  target = "IRQ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "TYP-0006"  target = "TYP-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "SOP-0001"  target = "TYP-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "TYP-0004"  target = "IRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "TYP-0004"  target = "TYP-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "TYP-0005"  target = "IRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "SOP-0003"  target = "TYP-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "SOP-0005"  target = "TYP-0006" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "TYP-0006"  target = "IRQ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "SOP-0004"  target = "TYP-0008" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "SOP-0005"  target = "TYP-0008" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "TYP-0008"  target = "IRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "TYP-0007"  target = "TYP-0009" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "SOP-0002"  target = "TYP-0010" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "TYP-0011"  target = "TYP-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "TYP-0012"  target = "TYP-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "NFR-0001"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "TYP-0011"  target = "CRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "CRQ-0001"  target = "OBJ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "CRQ-0001"  target = "IRQ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0004"  target = "IRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0006"  target = "OBJ-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0002"  target = "OBJ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0007"  target = "IRQ-0001" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "UC-0007"  target = "IRQ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0001"  target = "OBJ-0002" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0004"  target = "OBJ-0003" >
+<rem:isChecked/>
+</rem:trace>
+<rem:trace source = "IRQ-0004"  target = "OBJ-0004" >
+<rem:isChecked/>
+</rem:trace>
+<rem:predefinedValueTypes>
+<rem:predefinedValueType
+ oid = "PVT-0001">
+<rem:name>
+Real</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2000</rem:year>
+<rem:month>10</rem:month>
+<rem:day>30</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Predefined OCL type</rem:comments>
+<rem:description>
+Real numbers</rem:description>
+<rem:definition>
+(null)
+</rem:definition>
+</rem:predefinedValueType>
+<rem:predefinedValueType
+ oid = "PVT-0002">
+<rem:name>
+Integer</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2000</rem:year>
+<rem:month>10</rem:month>
+<rem:day>30</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Predefined OCL type</rem:comments>
+<rem:description>
+Integer numbers</rem:description>
+<rem:definition>
+(null)
+</rem:definition>
+</rem:predefinedValueType>
+<rem:predefinedValueType
+ oid = "PVT-0003">
+<rem:name>
+Natural</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2000</rem:year>
+<rem:month>10</rem:month>
+<rem:day>30</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Predefined OCL type</rem:comments>
+<rem:description>
+Natural numbers</rem:description>
+<rem:definition>
+(null)
+</rem:definition>
+</rem:predefinedValueType>
+<rem:predefinedValueType
+ oid = "PVT-0004">
+<rem:name>
+String</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2000</rem:year>
+<rem:month>10</rem:month>
+<rem:day>30</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Predefined OCL type</rem:comments>
+<rem:description>
+Alphanumeric strings</rem:description>
+<rem:definition>
+(null)
+</rem:definition>
+</rem:predefinedValueType>
+<rem:predefinedValueType
+ oid = "PVT-0005">
+<rem:name>
+Date</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2000</rem:year>
+<rem:month>10</rem:month>
+<rem:day>30</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Predefined OCL type (non-standard)</rem:comments>
+<rem:description>
+Dates</rem:description>
+<rem:definition>
+(null)
+</rem:definition>
+</rem:predefinedValueType>
+<rem:predefinedValueType
+ oid = "PVT-0006">
+<rem:name>
+Time</rem:name>
+<rem:version>
+<rem:major>1</rem:major>
+<rem:minor>0</rem:minor>
+<rem:date>
+<rem:year>2000</rem:year>
+<rem:month>10</rem:month>
+<rem:day>30</rem:day>
+</rem:date>
+</rem:version>
+<rem:comments>
+Predefined OCL type (non-standard)</rem:comments>
+<rem:description>
+Hour:minutes:seconds</rem:description>
+<rem:definition>
+(null)
+</rem:definition>
+</rem:predefinedValueType>
+</rem:predefinedValueTypes>
+<rem:predefinedValues>
+<rem:changeRequestStatusValue oid = "CRV-0001">
+<rem:name>PD</rem:name>
+</rem:changeRequestStatusValue>
+<rem:changeRequestStatusValue oid = "CRV-0002">
+<rem:name>pendiente de análisis</rem:name>
+</rem:changeRequestStatusValue>
+<rem:changeRequestStatusValue oid = "CRV-0003">
+<rem:name>pendiente de aprobar/rechazar</rem:name>
+</rem:changeRequestStatusValue>
+<rem:changeRequestStatusValue oid = "CRV-0004">
+<rem:name>pendiente de realización</rem:name>
+</rem:changeRequestStatusValue>
+<rem:changeRequestStatusValue oid = "CRV-0005">
+<rem:name>verificado</rem:name>
+</rem:changeRequestStatusValue>
+<rem:changeRequestStatusValue oid = "CRV-0006">
+<rem:name>rechazado</rem:name>
+</rem:changeRequestStatusValue>
+<rem:conflictStatusValue oid = "CSV-0001">
+<rem:name>PD</rem:name>
+</rem:conflictStatusValue>
+<rem:conflictStatusValue oid = "CSV-0002">
+<rem:name>no resuelto</rem:name>
+</rem:conflictStatusValue>
+<rem:conflictStatusValue oid = "CSV-0003">
+<rem:name>en proceso de negociación</rem:name>
+</rem:conflictStatusValue>
+<rem:conflictStatusValue oid = "CSV-0004">
+<rem:name>resuelto</rem:name>
+</rem:conflictStatusValue>
+<rem:defectStatusValue oid = "DSV-0001">
+<rem:name>PD</rem:name>
+</rem:defectStatusValue>
+<rem:defectStatusValue oid = "DSV-0002">
+<rem:name>no eliminado</rem:name>
+</rem:defectStatusValue>
+<rem:defectStatusValue oid = "DSV-0003">
+<rem:name>en proceso de negociación</rem:name>
+</rem:defectStatusValue>
+<rem:defectStatusValue oid = "DSV-0004">
+<rem:name>eliminado</rem:name>
+</rem:defectStatusValue>
+<rem:defectTypeValue oid = "DTV-0001">
+<rem:name>PD</rem:name>
+<rem:description>
+<![CDATA[Por Determinar]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0002">
+<rem:name>Ambigüedad</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos, aunque comprensibles, tienen más de una interpretación posible]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0003">
+<rem:name>No necesidad</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no son necesarios porque no contribuyen a satisfacer ninguna necesidad de clientes o usuarios]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0004">
+<rem:name>Incomprensibilidad</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no pueden ser entendidos por algún lector]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0005">
+<rem:name>No verificabilidad</rem:name>
+<rem:description>
+<![CDATA[No se puede comprobar que el sistema satisface el requisito o requisitos]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0006">
+<rem:name>Inconsistencia</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no son consistentes, es decir, presentan contradicciones internas o entre varios]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0007">
+<rem:name>No implementabilidad</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no pueden ser implementados con la tecnología actual o dentro de un coste razonable]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0008">
+<rem:name>Verbosidad excesiva</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos pueden expresarse de forma más concisa sin alterar su significado]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0009">
+<rem:name>Dependiente del diseño</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos incluyen elementos dependientes del diseño del sistema]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0010">
+<rem:name>Redundancia</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos son redundantes o contienen elementos redundantes]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0011">
+<rem:name>Imprecisión</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no se expresan de forma precisa, es decir, usando cantidades numéricas siempre que sea posible con el nivel adecuado de precisión]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0012">
+<rem:name>Incompleción</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no describen todo lo que el sistema se supone que deberá hacer, no describen las respuestas del sistema a todas las posibles situaciones o incluyen elementos por determinar (PD)]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0013">
+<rem:name>Prioridad no establecida</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no tienen establecida su prioridad, es decir, su importancia y su urgencia]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0014">
+<rem:name>Estabilidad no establecida</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no tienen estimada su estabilidad]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0015">
+<rem:name>Nivel incorrecto de detalle</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no están expresados con el nivel adecuado de detalle, es decir, son demasiado abstractos o demasiado detallados]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0016">
+<rem:name>No rastreabilidad</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no están trazados hacia sus orígenes, bien requisitos de nivel superior (objetivos), bien clientes y usuarios]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0017">
+<rem:name>Organización incorrecta</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos no están organizados correctamente según la normativa aplicada o el documento no contiene las secciones obligatorias]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:defectTypeValue oid = "DTV-0023">
+<rem:name>Otro</rem:name>
+<rem:description>
+<![CDATA[El requisito o requisitos presentan otro tipo de defecto]]>
+</rem:description>
+</rem:defectTypeValue>
+<rem:importanceValue oid = "IMV-0001">
+<rem:name>PD</rem:name>
+</rem:importanceValue>
+<rem:importanceValue oid = "IMV-0002">
+<rem:name>vital</rem:name>
+</rem:importanceValue>
+<rem:importanceValue oid = "IMV-0003">
+<rem:name>importante</rem:name>
+</rem:importanceValue>
+<rem:importanceValue oid = "IMV-0004">
+<rem:name>quedaría bien</rem:name>
+</rem:importanceValue>
+<rem:stabilityValue oid = "SBV-0001">
+<rem:name>PD</rem:name>
+</rem:stabilityValue>
+<rem:stabilityValue oid = "SBV-0002">
+<rem:name>baja</rem:name>
+</rem:stabilityValue>
+<rem:stabilityValue oid = "SBV-0003">
+<rem:name>media</rem:name>
+</rem:stabilityValue>
+<rem:stabilityValue oid = "SBV-0004">
+<rem:name>alta</rem:name>
+</rem:stabilityValue>
+<rem:statusValue oid = "STV-0001">
+<rem:name>PD</rem:name>
+</rem:statusValue>
+<rem:statusValue oid = "STV-0002">
+<rem:name>en construcción</rem:name>
+</rem:statusValue>
+<rem:statusValue oid = "STV-0003">
+<rem:name>pendiente de verificación</rem:name>
+</rem:statusValue>
+<rem:statusValue oid = "STV-0004">
+<rem:name>pendiente de validación</rem:name>
+</rem:statusValue>
+<rem:statusValue oid = "STV-0005">
+<rem:name>validado</rem:name>
+</rem:statusValue>
+<rem:terminationValue oid = "TEV-0001">
+<rem:name>PD</rem:name>
+</rem:terminationValue>
+<rem:terminationValue oid = "TEV-0002">
+<rem:name>continúa</rem:name>
+</rem:terminationValue>
+<rem:terminationValue oid = "TEV-0003">
+<rem:name>queda sin efecto</rem:name>
+</rem:terminationValue>
+<rem:timeUnitValue oid = "TUV-0001">
+<rem:name>PD</rem:name>
+</rem:timeUnitValue>
+<rem:timeUnitValue oid = "TUV-0002">
+<rem:name>año(s)</rem:name>
+</rem:timeUnitValue>
+<rem:timeUnitValue oid = "TUV-0005">
+<rem:name>mes(es)</rem:name>
+</rem:timeUnitValue>
+<rem:timeUnitValue oid = "TUV-0007">
+<rem:name>semana(s)</rem:name>
+</rem:timeUnitValue>
+<rem:timeUnitValue oid = "TUV-0008">
+<rem:name>día(s)</rem:name>
+</rem:timeUnitValue>
+<rem:timeUnitValue oid = "TUV-0009">
+<rem:name>hora(s)</rem:name>
+</rem:timeUnitValue>
+<rem:timeUnitValue oid = "TUV-0010">
+<rem:name>minuto(s)</rem:name>
+</rem:timeUnitValue>
+<rem:timeUnitValue oid = "TUV-0011">
+<rem:name>segundo(s)</rem:name>
+</rem:timeUnitValue>
+<rem:timeUnitValue oid = "TUV-0012">
+<rem:name>décima(s) de segundo</rem:name>
+</rem:timeUnitValue>
+<rem:timeUnitValue oid = "TUV-0013">
+<rem:name>centésima(s) de segundo</rem:name>
+</rem:timeUnitValue>
+<rem:timeUnitValue oid = "TUV-0014">
+<rem:name>milisegundo(s)</rem:name>
+</rem:timeUnitValue>
+<rem:urgencyValue oid = "URV-0001">
+<rem:name>PD</rem:name>
+</rem:urgencyValue>
+<rem:urgencyValue oid = "URV-0002">
+<rem:name>inmediatamente</rem:name>
+</rem:urgencyValue>
+<rem:urgencyValue oid = "URV-0003">
+<rem:name>hay presión</rem:name>
+</rem:urgencyValue>
+<rem:urgencyValue oid = "URV-0004">
+<rem:name>puede esperar</rem:name>
+</rem:urgencyValue>
+</rem:predefinedValues>
+</rem:requirementsProject>

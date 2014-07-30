@@ -1,0 +1,3640 @@
+<html xmlns:rem="http://rem.lsi.us.es">
+<head>
+<title>Proyecto Sistema Gestión Préstamos</title>
+<style type="text/css">
+<!--
+            body {
+                font-family: arial,verdana;
+                font-size: 10pt;
+                text-align: justify
+            }
+
+            h1 { font-size: 14pt }
+            h2 { font-size: 13pt }
+            h3 { font-size: 12pt }
+            h4 { font-size: 11pt }
+            h5 { font-size: 10pt }
+            h6 { font-size: 10pt }
+
+            h1.cover { font-size: 20pt }
+
+            tr { font-size: 10pt }
+
+            table { border: black solid; }
+            table.TOC { border: none; }
+            ul {
+                margin-top:    0pt;
+                margin-bottom: 0pt;
+                margin-left:   12pt
+            }
+        -->
+</style>
+</head>
+<body>
+<center>
+<h3>Proyecto Sistema Gestión Préstamos</h3>
+<p />
+<h1 class="cover">Documento de Requisitos del Sistema</h1>
+<p />
+<h3>Versión 1.0</h3>
+<h3>Fecha 06/05/2010</h3>
+<p />
+<h3>Preparado para:</h3>
+<a href="#ORG-0001" title="Banca Asturiana">
+<p>
+Banca Asturiana</p>
+</a>
+<p />
+<h3>Preparado por:</h3>
+<a href="#ORG-0002" title="Grupo ISG1-26">
+<p>
+Grupo ISG1-26</p>
+</a>
+<p />
+</center>
+<hr size="4" />
+<p />
+<h1 align="left">Índice</h1>
+<p />
+<table border="0" width="100%" class="TOC">
+<tr>
+<th align="left" valign="top">1 </th>
+<th align="left" valign="top" width="100%" colspan="3">
+<a href="#SEC-0001">
+Introducción</a>
+</th>
+</tr>
+<tr>
+<th align="left" valign="top">2 </th>
+<th align="left" valign="top" width="100%" colspan="3">
+<a href="#SEC-0002">
+Participantes en el proyecto</a>
+</th>
+</tr>
+<tr><td />
+<td align="left" valign="top">2.1 </td>
+<td align="left" valign="top" width="100%" colspan="2">
+<a href="#SEC-0003">
+Organizaciones</a>
+</td>
+</tr>
+<tr><td />
+<td align="left" valign="top">2.2 </td>
+<td align="left" valign="top" width="100%" colspan="2">
+<a href="#SEC-0004">
+Participantes</a>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">3 </th>
+<th align="left" valign="top" width="100%" colspan="3">
+<a href="#SEC-0005">
+Descripción del sistema actual</a>
+</th>
+</tr>
+<tr><td />
+<td align="left" valign="top">3.1 </td>
+<td align="left" valign="top" width="100%" colspan="2">
+<a href="#SEC-0006">
+Solicitud de préstamo</a>
+</td>
+</tr>
+<tr><td />
+<td align="left" valign="top">3.2 </td>
+<td align="left" valign="top" width="100%" colspan="2">
+<a href="#SEC-0007">
+Comprobar solvencia cliente</a>
+</td>
+</tr>
+<tr><td />
+<td align="left" valign="top">3.3 </td>
+<td align="left" valign="top" width="100%" colspan="2">
+<a href="#SEC-0008">
+Control de préstamo</a>
+</td>
+</tr>
+<tr><td />
+<td align="left" valign="top">3.4 </td>
+<td align="left" valign="top" width="100%" colspan="2">
+<a href="#SEC-0009">
+Cancelación de préstamo</a>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">4 </th>
+<th align="left" valign="top" width="100%" colspan="3">
+<a href="#SEC-0010">
+Objetivos del sistema</a>
+</th>
+</tr>
+<tr>
+<th align="left" valign="top">5 </th>
+<th align="left" valign="top" width="100%" colspan="3">
+<a href="#SEC-0011">
+Catálogo de requisitos del sistema</a>
+</th>
+</tr>
+<tr><td />
+<td align="left" valign="top">5.1 </td>
+<td align="left" valign="top" width="100%" colspan="2">
+<a href="#SEC-0018">
+Requisitos de Información</a>
+</td>
+</tr>
+<tr><td />
+<td align="left" valign="top">5.2 </td>
+<td align="left" valign="top" width="100%" colspan="2">
+<a href="#SEC-0014">
+Requisitos funcionales</a>
+</td>
+</tr>
+<tr><td /><td />
+<td albgn="left" valign="top">5.2.1 </td>
+<td align="left" valign="top" width="100%">
+<a href="#SEC-0015">
+Diagramas de casos de uso</a>
+</td>
+</tr>
+<tr><td /><td />
+<td albgn="left" valign="top">5.2.2 </td>
+<td align="left" valign="top" width="100%">
+<a href="#SEC-0016">
+Definicion de los actores</a>
+</td>
+</tr>
+<tr><td /><td />
+<td albgn="left" valign="top">5.2.3 </td>
+<td align="left" valign="top" width="100%">
+<a href="#SEC-0017">
+Casos de uso del sistema</a>
+</td>
+</tr>
+<tr><td />
+<td align="left" valign="top">5.3 </td>
+<td align="left" valign="top" width="100%" colspan="2">
+<a href="#SEC-0019">
+Reglas de negocio</a>
+</td>
+</tr>
+<tr><td />
+<td align="left" valign="top">5.4 </td>
+<td align="left" valign="top" width="100%" colspan="2">
+<a href="#SEC-0020">
+Requisitos no funcionales</a>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">6 </th>
+<th align="left" valign="top" width="100%" colspan="3">
+<a href="#SEC-0012">
+Matriz de rastreabilidad</a>
+</th>
+</tr>
+<tr>
+<th align="left" valign="top">7 </th>
+<th align="left" valign="top" width="100%" colspan="3">
+<a href="#SEC-0013">
+Glosario de términos</a>
+</th>
+</tr>
+<tr>
+<th align="left" valign="top">A </th>
+<th align="left" valign="top" width="100%" colspan="3">
+<a href="#SEC-0021">
+Actas de reuniones</a>
+</th>
+</tr>
+<tr>
+<th align="left" valign="top">B </th>
+<th align="left" valign="top" width="100%" colspan="3">
+<a href="#SEC-0022">
+Documentación aportada</a>
+</th>
+</tr>
+</table>
+<p />
+<hr size="4" />
+<p />
+<a name="SEC-0001" />
+<h1 align="left">1 
+Introducción</h1><a name="PRG-0001" />
+<p>Presentamos aquí el documento de requisitos de un sistema de <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamos</a> bancarios.
+<br />La entidad para la que se realiza este trabajo posee sucursales en todo el país. Debido a la gran envergadura de este banco se tiene la necesidad de unificar procedimientos a la hora de gestionar los <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamos</a>, así como sistematizar el proceso y almacenar todos los datos de modo que sean accesibles desde toda sucursal.
+<br />
+<br />En el siguiente documento se encuentran los requisitos que el sistema deberá cumplir, obtenidos a raíz del análisis de las entrevistas sostenidas con los informadores de la empresa.</p>
+<a name="SEC-0002" />
+<h1 align="left">2 
+Participantes en el proyecto</h1><a name="SEC-0003" />
+<h2 align="left">2.1 
+Organizaciones</h2><a name="ORG-0001" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">Organización</th>
+<th align="left" valign="top" width="100%">
+Banca Asturiana</th>
+</tr>
+<tr>
+<th align="left" valign="top">Dirección</th>
+<td align="left" valign="top" colspan="1">Avda. de la Constitucion 26
+<br />41001 Sevilla</td>
+</tr>
+<tr>
+<th align="left" valign="top">Teléfono</th>
+<td align="left" valign="top" colspan="1">955985555</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fax</th>
+<td align="left" valign="top" colspan="1">955985556</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Entidad bancaria</td>
+</tr>
+</table>
+<p />
+<a name="ORG-0002" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">Organización</th>
+<th align="left" valign="top" width="100%">
+Grupo ISG1-26</th>
+</tr>
+<tr>
+<th align="left" valign="top">Dirección</th>
+<td align="left" valign="top" colspan="1">Reina Mercedes s/n
+<br />41012 Sevilla</td>
+</tr>
+<tr>
+<th align="left" valign="top">Teléfono</th>
+<td align="left" valign="top" colspan="1">954556817 (ETSII, US)</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fax</th>
+<td align="left" valign="top" colspan="1">-</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Escuela Técnica Superior de Ingeniería Informática, Universidad de Sevilla</td>
+</tr>
+</table>
+<p />
+<a name="SEC-0004" />
+<h2 align="left">2.2 
+Participantes</h2><a name="STK-0001" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">Participante</th>
+<th align="left" valign="top" width="100%">
+María De Miguel Jiménez</th>
+</tr>
+<tr><th align="left" valign="top">Organización</th>
+<td align="left" valign="top">
+<a href="#ORG-0002">
+Grupo ISG1-26</a>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Rol</th>
+<td align="left" valign="top" colspan="1">Desarrollador</td>
+</tr>
+<tr><th align="left" valign="top" nowrap="1">Es desarrollador</th>
+<td align="left" valign="top">Sí</td>
+</tr>
+<tr><th align="left" valign="top">Es cliente</th>
+<td align="left" valign="top">No</td>
+</tr>
+<tr><th align="left" valign="top">Es usuario</th>
+<td align="left" valign="top">No</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="STK-0002" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">Participante</th>
+<th align="left" valign="top" width="100%">
+José Antonio Jiménez Carmona</th>
+</tr>
+<tr><th align="left" valign="top">Organización</th>
+<td align="left" valign="top">
+<a href="#ORG-0002">
+Grupo ISG1-26</a>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Rol</th>
+<td align="left" valign="top" colspan="1">Desarrollador</td>
+</tr>
+<tr><th align="left" valign="top" nowrap="1">Es desarrollador</th>
+<td align="left" valign="top">Sí</td>
+</tr>
+<tr><th align="left" valign="top">Es cliente</th>
+<td align="left" valign="top">No</td>
+</tr>
+<tr><th align="left" valign="top">Es usuario</th>
+<td align="left" valign="top">No</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="STK-0003" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">Participante</th>
+<th align="left" valign="top" width="100%">
+Miguel Centeno Muñoz</th>
+</tr>
+<tr><th align="left" valign="top">Organización</th>
+<td align="left" valign="top">
+<a href="#ORG-0002">
+Grupo ISG1-26</a>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Rol</th>
+<td align="left" valign="top" colspan="1">Desarrollador</td>
+</tr>
+<tr><th align="left" valign="top" nowrap="1">Es desarrollador</th>
+<td align="left" valign="top">Sí</td>
+</tr>
+<tr><th align="left" valign="top">Es cliente</th>
+<td align="left" valign="top">No</td>
+</tr>
+<tr><th align="left" valign="top">Es usuario</th>
+<td align="left" valign="top">No</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="STK-0004" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">Participante</th>
+<th align="left" valign="top" width="100%">
+Carmen María Sivianes Burgos</th>
+</tr>
+<tr><th align="left" valign="top">Organización</th>
+<td align="left" valign="top">
+<a href="#ORG-0002">
+Grupo ISG1-26</a>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Rol</th>
+<td align="left" valign="top" colspan="1">Desarrollador</td>
+</tr>
+<tr><th align="left" valign="top" nowrap="1">Es desarrollador</th>
+<td align="left" valign="top">Sí</td>
+</tr>
+<tr><th align="left" valign="top">Es cliente</th>
+<td align="left" valign="top">No</td>
+</tr>
+<tr><th align="left" valign="top">Es usuario</th>
+<td align="left" valign="top">No</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="STK-0005" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">Participante</th>
+<th align="left" valign="top" width="100%">
+María Antonia Escribano Rodríguez</th>
+</tr>
+<tr><th align="left" valign="top">Organización</th>
+<td align="left" valign="top">
+<a href="#ORG-0001">
+Banca Asturiana</a>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Rol</th>
+<td align="left" valign="top" colspan="1">Analista de <a href="#GLO-0016" title="El riesgo de crédito es la posible pérdida que asume un agente económico como consecuencia del incumplimiento de las obligaciones contractuales que incumben a las contrapartes con las que se relaciona. El concepto se relaciona habitualmente con las instituciones financieras y los bancos, pero afecta también a empresas y organismos de otros sectores">Riesgos</a>
+</td>
+</tr>
+<tr><th align="left" valign="top" nowrap="1">Es desarrollador</th>
+<td align="left" valign="top">No</td>
+</tr>
+<tr><th align="left" valign="top">Es cliente</th>
+<td align="left" valign="top">Sí</td>
+</tr>
+<tr><th align="left" valign="top">Es usuario</th>
+<td align="left" valign="top">No</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="STK-0006" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">Participante</th>
+<th align="left" valign="top" width="100%">
+Aurelio Rodríguez Urbano</th>
+</tr>
+<tr><th align="left" valign="top">Organización</th>
+<td align="left" valign="top">
+<a href="#ORG-0001">
+Banca Asturiana</a>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Rol</th>
+<td align="left" valign="top" colspan="1">Analista de <a href="#GLO-0016" title="El riesgo de crédito es la posible pérdida que asume un agente económico como consecuencia del incumplimiento de las obligaciones contractuales que incumben a las contrapartes con las que se relaciona. El concepto se relaciona habitualmente con las instituciones financieras y los bancos, pero afecta también a empresas y organismos de otros sectores">Riesgos</a> - Subdirector</td>
+</tr>
+<tr><th align="left" valign="top" nowrap="1">Es desarrollador</th>
+<td align="left" valign="top">No</td>
+</tr>
+<tr><th align="left" valign="top">Es cliente</th>
+<td align="left" valign="top">Sí</td>
+</tr>
+<tr><th align="left" valign="top">Es usuario</th>
+<td align="left" valign="top">No</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="STK-0007" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">Participante</th>
+<th align="left" valign="top" width="100%">
+José Antonio Jiménez Budia</th>
+</tr>
+<tr><th align="left" valign="top">Organización</th>
+<td align="left" valign="top">
+<a href="#ORG-0001">
+Banca Asturiana</a>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Rol</th>
+<td align="left" valign="top" colspan="1">Director de Control de Gestión de Andalucía</td>
+</tr>
+<tr><th align="left" valign="top" nowrap="1">Es desarrollador</th>
+<td align="left" valign="top">No</td>
+</tr>
+<tr><th align="left" valign="top">Es cliente</th>
+<td align="left" valign="top">Sí</td>
+</tr>
+<tr><th align="left" valign="top">Es usuario</th>
+<td align="left" valign="top">No</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SEC-0005" />
+<h1 align="left">3 
+Descripción del sistema actual</h1><a name="SEC-0006" />
+<h2 align="left">3.1 
+Solicitud de préstamo</h2><a name="PRG-0002" />
+<p>El proceso principal de negocio comienza cuando un cliente acude a una sucursal y solicita un <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>. El cliente relllena los formularios obligatorios y entrega la documentación necesaria al <a href="#GLO-0018" title="(financiero) es el profesional que ayuda a descubrir las necesidades financieras, analizando circunstancias pasadas, presentes y futuras de su cliente, teniendo en cuenta la edad, su patrimonio disponible, su tipo impositivo, su situación profesional y familiar, y el resto de inversiones que pueda disponer. Una vez analizado su perfil de riesgo y sus necesidades, el asesor llevará a cabo sus recomendaciones de inversión, asesorándole según sus circunstancias y necesidades vayan cambiando y adaptándolas al momento actual.">asesor</a> financiero. 
+<br />
+<br />El <a href="#GLO-0018" title="(financiero) es el profesional que ayuda a descubrir las necesidades financieras, analizando circunstancias pasadas, presentes y futuras de su cliente, teniendo en cuenta la edad, su patrimonio disponible, su tipo impositivo, su situación profesional y familiar, y el resto de inversiones que pueda disponer. Una vez analizado su perfil de riesgo y sus necesidades, el asesor llevará a cabo sus recomendaciones de inversión, asesorándole según sus circunstancias y necesidades vayan cambiando y adaptándolas al momento actual.">asesor</a> comprueba la solvencia del cliente, si está en la zona negra se le deniega el <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a> y se termina el proceso, si no, se traspasan los datos a la comisión de <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamos</a> del banco para evaluar la situación y enviar la información a la Unidad de Decisión de Operaciones que analiza la información recibida. Si la <a href="#GLO-0013" title="(O Departamento de Análisis de Riesgos) Departamento de una instritución bancaria dedicado al análisis de los posibles riesgos antes de la concesión de un crédito o un préstamo.">UDO</a> decide denegar el prestamo, se informa al cliente y se termian el proceso.
+<br />
+<br />Si la <a href="#GLO-0013" title="(O Departamento de Análisis de Riesgos) Departamento de una instritución bancaria dedicado al análisis de los posibles riesgos antes de la concesión de un crédito o un préstamo.">UDO</a> acepta, se informa al cliente y éste analiza las condiciones del <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>. Si el cliente rechaza las condiciones, se termina el proceso. Si el cliente acepta las condiciones, informa al banco que formaliza el <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a> mandando la póliza al <a href="#GLO-0014" title="Funcionario público autorizado para dar fe de los contratos, testamentos y otros actos extrajudiciales, conforme a las leyes.">notario</a>.
+<br />
+<br />La póliza debe ser firmada por el cliente y el <a href="#GLO-0014" title="Funcionario público autorizado para dar fe de los contratos, testamentos y otros actos extrajudiciales, conforme a las leyes.">notario</a>, que sella la póliza y la envía al banco y al registro de propiedad si es un <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a> hipotecario. El banco formaliza la operación y entrega el dinero al cliente.
+<br />
+<br />
+</p>
+<a name="GRF-0001" />
+<p align="center">
+<img src=".\img\solicitud.wmf" title=".\img\solicitud.wmf" />
+</p>
+<p align="center">
+<b>Figura 1</b>:
+                
+Solicitud</p>
+<a name="SEC-0007" />
+<h2 align="left">3.2 
+Comprobar solvencia cliente</h2><a name="PRG-0003" />
+<p>El proceso comienza cuando el <a href="#GLO-0018" title="(financiero) es el profesional que ayuda a descubrir las necesidades financieras, analizando circunstancias pasadas, presentes y futuras de su cliente, teniendo en cuenta la edad, su patrimonio disponible, su tipo impositivo, su situación profesional y familiar, y el resto de inversiones que pueda disponer. Una vez analizado su perfil de riesgo y sus necesidades, el asesor llevará a cabo sus recomendaciones de inversión, asesorándole según sus circunstancias y necesidades vayan cambiando y adaptándolas al momento actual.">asesor</a> tiene que comprobar la solvencia de un cliente que ha pedido un <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>. El <a href="#GLO-0018" title="(financiero) es el profesional que ayuda a descubrir las necesidades financieras, analizando circunstancias pasadas, presentes y futuras de su cliente, teniendo en cuenta la edad, su patrimonio disponible, su tipo impositivo, su situación profesional y familiar, y el resto de inversiones que pueda disponer. Una vez analizado su perfil de riesgo y sus necesidades, el asesor llevará a cabo sus recomendaciones de inversión, asesorándole según sus circunstancias y necesidades vayan cambiando y adaptándolas al momento actual.">asesor</a> solicita al cliente la documentación necesaria: <a href="#GLO-0012" title="Relación nominal de los individuos que en una oficina pública o particular han de percibir haberes y justificar con su firma haberlos recibido.">nómina</a> y <a href="#GLO-0011" title="La que se hace a la Administración tributaria manifestando la naturaleza y circunstancias del hecho imponible.">declaración de la renta</a>. Cuando el cliente envia la documentación y el <a href="#GLO-0018" title="(financiero) es el profesional que ayuda a descubrir las necesidades financieras, analizando circunstancias pasadas, presentes y futuras de su cliente, teniendo en cuenta la edad, su patrimonio disponible, su tipo impositivo, su situación profesional y familiar, y el resto de inversiones que pueda disponer. Una vez analizado su perfil de riesgo y sus necesidades, el asesor llevará a cabo sus recomendaciones de inversión, asesorándole según sus circunstancias y necesidades vayan cambiando y adaptándolas al momento actual.">asesor</a> la recibe, éste analiza los datos introduciéndolos en el Scoring. Dependiendo del resultado pueden pasar dos cosas. 
+<br />
+<br />Si el cliente está en la zona negra, no se le concede el <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a> y acaba el proceso. Si está en la zona aceptable se procede a mirar la <a href="#GLO-0017" title="Es el tiempo acumulado por un trabajador durante la vida activa que haya trabajado en una o varias empresas u organismos oficiales.">vida laboral</a> para comprobar la estabilidad. Este paso puede tardar un máximo de 15 días en los cuales el cliente está a la espera.
+<br />Si después de comprobar la <a href="#GLO-0017" title="Es el tiempo acumulado por un trabajador durante la vida activa que haya trabajado en una o varias empresas u organismos oficiales.">vida laboral</a>, se decide que el cliente no es estable, se procede a denegar el <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a> y se acaba el proceso.
+<br />
+<br />Si por el contrario el cliente resulta estable, se continua el proceso solicitando al cliente garantías: bienes y títulos de propiedad. Si en este paso el cliente comunica que no tiene ningún título de propiedad, se le solicita un <a href="#GLO-0010" title="Persona que avala.">avalista</a>, el cual recibe la solicitud y analiza la situación.
+<br />
+<br />Si el <a href="#GLO-0009" title="Firma que se pone al pie de una letra u otro documento de crédito, para responder de su pago en caso de no efectuarlo la persona principalmente obligada a él.">aval</a> decide no aceptar la petición, se deniega el prestamo y acaba el proceso. Si por el contrario decide aceptar, el banco envía una solicitud para comprobar la información registrada en el Banco de España, y éste se la envía.
+<br />
+<br />El banco analiza la información y si el cliente ya tenía algún <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>, se le deniega éste y termina el proceso. Si no tiene <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamos</a> pendientes, se formaliza el <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a> con la firma de la póliza por parte del cliente, <a href="#GLO-0010" title="Persona que avala.">avalista</a> y <a href="#GLO-0014" title="Funcionario público autorizado para dar fe de los contratos, testamentos y otros actos extrajudiciales, conforme a las leyes.">notario</a>, el cual garantiza la firma de los anteriores, sella la póliza y la manda al banco.
+<br />
+</p>
+<a name="GRF-0002" />
+<p align="center">
+<img src=".\img\solvencia.wmf" title=".\img\solvencia.wmf" />
+</p>
+<p align="center">
+<b>Figura 1</b>:
+                
+Solvencia</p>
+<a name="SEC-0008" />
+<h2 align="left">3.3 
+Control de préstamo</h2><a name="PRG-0004" />
+<p>El proceso principal comienza cuando el sistema comprueba si el cliente ha pagado la mensualidad correspondiente. Si el cliente ha pagado, se espera hasta el próximo plazo, pero puede que sea el último plazo, en ese caso se certifica la cancelación del <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a> y se termina el proceso. 
+<br />
+<br />Si no ha pagado se declara al cliente en situación de irregularidad y se le llama para comunicarle que hay un impago. El cliente estudia la situación, si puede pagar se termina el proceso hasta el próximo plazo, si no, el banco espera 90 días para volver a reclamar el dinero. 
+<br />
+<br />Pasados los 90 días se vuelve a llamar al cliente, si puede pagar se termina el proceso hasta el próximo plazo, si no, el banco le declara en situación de morosidad y espera 150 días hasta volver a reclamar el dinero. 
+<br />
+<br />Pasados los 150 días se llama al cliente y al <a href="#GLO-0010" title="Persona que avala.">avalista</a> para que analicen la situación. Si el cliente puede pagar se termina el proceso hasta el próximo plazo, si no, se reclama al <a href="#GLO-0010" title="Persona que avala.">avalista</a>. Si el <a href="#GLO-0010" title="Persona que avala.">avalista</a> puede pagar se termina el proceso hasta el próximo plazo, si no, el banco procede a ejecutar el <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>.</p>
+<a name="GRF-0003" />
+<p align="center">
+<img src=".\img\control.wmf" title=".\img\control.wmf" />
+</p>
+<p align="center">
+<b>Figura 1</b>:
+                
+Control</p>
+<a name="SEC-0009" />
+<h2 align="left">3.4 
+Cancelación de préstamo</h2><a name="PRG-0005" />
+<p>El proceso comienza cuando el cliente solicita al banco la cancelación del <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>. El banco calcula las tasas, el total a pagar por el cliente y le solicita el pago. El cliente recibe la solicitud y abona la cantidad solicitada. Cuando el banco recibe confirmación del pago, procede a cancelar el <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a> y lo notifica al cliente.</p>
+<a name="GRF-0004" />
+<p align="center">
+<img src=".\img\cancelacion.wmf" title=".\img\cancelacion.wmf" />
+</p>
+<p align="center">
+<b>Figura 1</b>:
+                
+Cancelación</p>
+<a name="SEC-0010" />
+<h1 align="left">4 
+Objetivos del sistema</h1><a name="OBJ-0001" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">OBJ-0001</th>
+<th align="left" valign="top" width="100%">
+Gestión de <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">Préstamos</a>
+</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 11/05/2010 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0004">
+Carmen María Sivianes Burgos</a>
+<br />
+</li>
+<li>
+<a href="#STK-0002">
+José Antonio Jiménez Carmona</a>
+<br />
+</li>
+<li>
+<a href="#STK-0001">
+María De Miguel Jiménez</a>
+<br />
+</li>
+<li>
+<a href="#STK-0003">
+Miguel Centeno Muñoz</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0005">
+María Antonia Escribano Rodríguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    El sistema deberá 
+<em>
+gestionar toda la información acerca de los <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamos</a> a particulares de un banco, abarcando desde la solicitud de <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>, así como el control mensual y cancelación de los mismos. De manera particular, en este proyecto se debe prestar especial atención a los siguientes subobjetivos. </em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Subobjetivos</th>
+<td align="left" valign="top">
+<ul>
+<a name="OBJ-0002" />
+<li>
+<b>[OBJ-0002] 
+Comprobar solvencia</b>:
+		
+    El sistema deberá 
+<em>
+comprobar si el cliente es válido para concederle un <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>.</em> <ul>
+</ul>
+</li>
+<a name="OBJ-0003" />
+<li>
+<b>[OBJ-0003] 
+Control mensual</b>:
+		
+    El sistema deberá 
+<em>
+controlar los pagos mensuales del <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a> por parte del cliente.</em> <ul>
+</ul>
+</li>
+<a name="OBJ-0004" />
+<li>
+<b>[OBJ-0004] 
+Cancelar préstamo</b>:
+		
+    El sistema deberá 
+<em>
+cancelar el <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a> de un cliente.</em> <ul>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="1">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="1">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="1">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SEC-0011" />
+<h1 align="left">5 
+Catálogo de requisitos del sistema</h1><a name="SEC-0018" />
+<h2 align="left">5.1 
+Requisitos de Información</h2><a name="IRQ-0001" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">IRQ-0001</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Documentación sobre cada cliente y <a href="#GLO-0010" title="Persona que avala.">avalista</a>
+</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0 
+			( 21/05/2010 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0002">
+José Antonio Jiménez Carmona</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Aurelio Rodríguez Urbano</a>
+<br />
+</li>
+<li>
+<a href="#STK-0007">
+José Antonio Jiménez Budia</a>
+<br />
+</li>
+<li>
+<a href="#STK-0005">
+María Antonia Escribano Rodríguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#OBJ-0001" title="Gestión de Préstamos">
+                                [OBJ-0001] 
+Gestión de Préstamos</a>
+</li>
+<li>
+<a href="#OBJ-0002" title="Comprobar solvencia">
+                                [OBJ-0002] 
+Comprobar solvencia</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá almacenar la información correspondiente a 
+<em>
+clientes, <a href="#GLO-0010" title="Persona que avala.">avalistas</a>.
+				</em>
+    En concreto:
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Datos específicos</th>
+<td colspan="2" align="left" valign="top">
+<ul>
+<li>
+<a name="DAT-0020" />
+Nombre completo</li>
+<li>
+<a name="DAT-0019" />
+DNI</li>
+<li>
+<a name="DAT-0021" />
+Dirección de domicilio</li>
+<li>
+<a name="DAT-0023" />
+Fecha de nacimiento</li>
+<li>
+<a name="DAT-0022" />
+Números de teléfonos de contacto</li>
+<li>
+<a name="DAT-0024" />
+Activos y pasivos
+								(<em>
+Son los bienes que posee y los bienes que debe.</em>)
+							</li>
+<li>
+<a name="DAT-0025" />
+Situación familiar
+								(<em>
+Debe estar actualizado cada mes.</em>)
+							</li>
+<li>
+<a name="DAT-0026" />
+Situación laboral
+								(<em>
+Contiene el tipo de trabajo, el nombre de la empresa, el CIF de la empresa, las últimas <a href="#GLO-0012" title="Relación nominal de los individuos que en una oficina pública o particular han de percibir haberes y justificar con su firma haberlos recibido.">nóminas</a> del cliente y un certificado de que se
+<br />encuentra actualmente trabajando en dicha empresa. Todo esto tiene que estar actualizado cada mes.</em>)
+							</li>
+<li>
+<a name="DAT-0028" />
+Tipo de <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a> solicitado</li>
+<li>
+<a name="DAT-0029" />
+Cuantía del <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a> solicitado</li>
+<li>
+<a name="DAT-0030" />
+Motivo <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a> solicitado
+								(<em>
+Redacción escrita por el cliente exponiendo los motivos que han llevado al cliente a solicitar el <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>.</em>)
+							</li>
+<li>
+<a name="DAT-0045" />
+Bienes avalados
+								(<em>
+Contiene un certificado de propiedad por cada bien avalado.</em>)
+							</li>
+<li>
+<a name="DAT-0046" />
+Servicios financieros contratados vigentes.
+								(<em>
+Contiene información sobre cada uno de los servicios financieros vigentes que el cliente tenga contratados con la entidad bancaria o con otras entidades bancarias.</em>)
+							</li>
+<li>
+<a name="DAT-0039" />
+Comentarios subjetivos
+								(<em>
+Redacción escrita por el <a href="#GLO-0018" title="(financiero) es el profesional que ayuda a descubrir las necesidades financieras, analizando circunstancias pasadas, presentes y futuras de su cliente, teniendo en cuenta la edad, su patrimonio disponible, su tipo impositivo, su situación profesional y familiar, y el resto de inversiones que pueda disponer. Una vez analizado su perfil de riesgo y sus necesidades, el asesor llevará a cabo sus recomendaciones de inversión, asesorándole según sus circunstancias y necesidades vayan cambiando y adaptándolas al momento actual.">asesor</a> encargado del <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a> solicitado por el cliente con información subjetiva no interpretable por el sistema automático de concesión de <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamos</a> (Scoring).</em>)
+							</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th rowspan="2" align="left" valign="top">Tiempo de vida</th>
+<th align="left" valign="top">Medio</th>
+<th align="left" valign="top">Máximo</th>
+</tr>
+<tr>
+<td>50 
+                        año(s)</td>
+<td>50 
+                        año(s)</td>
+</tr>
+<tr>
+<th rowspan="2" align="left" valign="top">Ocurrencias simultáneas</th>
+<th align="left" valign="top">Medio</th>
+<th align="left" valign="top">Máximo</th>
+</tr>
+<tr>
+<td>5</td>
+<td>100</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="IRQ-0002" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">IRQ-0002</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Documentación sobre cada <a href="#GLO-0018" title="(financiero) es el profesional que ayuda a descubrir las necesidades financieras, analizando circunstancias pasadas, presentes y futuras de su cliente, teniendo en cuenta la edad, su patrimonio disponible, su tipo impositivo, su situación profesional y familiar, y el resto de inversiones que pueda disponer. Una vez analizado su perfil de riesgo y sus necesidades, el asesor llevará a cabo sus recomendaciones de inversión, asesorándole según sus circunstancias y necesidades vayan cambiando y adaptándolas al momento actual.">asesor</a> que gestiona <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamos</a>
+</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0 
+			( 26/05/2010 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0002">
+José Antonio Jiménez Carmona</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Aurelio Rodríguez Urbano</a>
+<br />
+</li>
+<li>
+<a href="#STK-0005">
+María Antonia Escribano Rodríguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá almacenar la información correspondiente a 
+<em>
+<a href="#GLO-0018" title="(financiero) es el profesional que ayuda a descubrir las necesidades financieras, analizando circunstancias pasadas, presentes y futuras de su cliente, teniendo en cuenta la edad, su patrimonio disponible, su tipo impositivo, su situación profesional y familiar, y el resto de inversiones que pueda disponer. Una vez analizado su perfil de riesgo y sus necesidades, el asesor llevará a cabo sus recomendaciones de inversión, asesorándole según sus circunstancias y necesidades vayan cambiando y adaptándolas al momento actual.">asesor</a>.
+				</em>
+    En concreto:
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Datos específicos</th>
+<td colspan="2" align="left" valign="top">
+<ul>
+<li>
+<a name="DAT-0040" />
+Nombre completo</li>
+<li>
+<a name="DAT-0041" />
+DNI</li>
+<li>
+<a name="DAT-0042" />
+Nº identificativo de <a href="#GLO-0018" title="(financiero) es el profesional que ayuda a descubrir las necesidades financieras, analizando circunstancias pasadas, presentes y futuras de su cliente, teniendo en cuenta la edad, su patrimonio disponible, su tipo impositivo, su situación profesional y familiar, y el resto de inversiones que pueda disponer. Una vez analizado su perfil de riesgo y sus necesidades, el asesor llevará a cabo sus recomendaciones de inversión, asesorándole según sus circunstancias y necesidades vayan cambiando y adaptándolas al momento actual.">asesor</a> (referencia)</li>
+<li>
+<a name="DAT-0043" />
+Nº identificativo de oficina</li>
+<li>
+<a name="DAT-0044" />
+Lista de <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamos</a> gestionados</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th rowspan="2" align="left" valign="top">Tiempo de vida</th>
+<th align="left" valign="top">Medio</th>
+<th align="left" valign="top">Máximo</th>
+</tr>
+<tr>
+<td>50 
+                        PD</td>
+<td>50 
+                        PD</td>
+</tr>
+<tr>
+<th rowspan="2" align="left" valign="top">Ocurrencias simultáneas</th>
+<th align="left" valign="top">Medio</th>
+<th align="left" valign="top">Máximo</th>
+</tr>
+<tr>
+<td>100</td>
+<td>100</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">pendiente de verificación</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">media</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="IRQ-0003" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">IRQ-0003</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Documentación sobre cada <a href="#GLO-0014" title="Funcionario público autorizado para dar fe de los contratos, testamentos y otros actos extrajudiciales, conforme a las leyes.">notario</a> que ha firmado contratos de <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>
+</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0 
+			( 26/05/2010 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0002">
+José Antonio Jiménez Carmona</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Aurelio Rodríguez Urbano</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá almacenar la información correspondiente a 
+<em>
+<a href="#GLO-0014" title="Funcionario público autorizado para dar fe de los contratos, testamentos y otros actos extrajudiciales, conforme a las leyes.">notario</a>.
+				</em>
+    En concreto:
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Datos específicos</th>
+<td colspan="2" align="left" valign="top">
+<ul>
+<li>
+<a name="DAT-0048" />
+Nombre completo</li>
+<li>
+<a name="DAT-0049" />
+DNI</li>
+<li>
+<a name="DAT-0050" />
+Dirección de domicilio</li>
+<li>
+<a name="DAT-0051" />
+Números de teléfonos de contacto</li>
+<li>
+<a name="DAT-0052" />
+Número de colegiado</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th rowspan="2" align="left" valign="top">Tiempo de vida</th>
+<th align="left" valign="top">Medio</th>
+<th align="left" valign="top">Máximo</th>
+</tr>
+<tr>
+<td>50 
+                        año(s)</td>
+<td>50 
+                        año(s)</td>
+</tr>
+<tr>
+<th rowspan="2" align="left" valign="top">Ocurrencias simultáneas</th>
+<th align="left" valign="top">Medio</th>
+<th align="left" valign="top">Máximo</th>
+</tr>
+<tr>
+<td>100</td>
+<td>100</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">puede esperar</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">pendiente de verificación</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">media</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="IRQ-0004" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">IRQ-0004</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Información sobre <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">Préstamos</a>
+</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0 
+			( 09/06/2010 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+María De Miguel Jiménez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0005">
+María Antonia Escribano Rodríguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#IRQ-0001" title="Documentación sobre cada cliente y avalista">
+                                [IRQ-0001] 
+Documentación sobre cada cliente y avalista</a>
+</li>
+<li>
+<a href="#IRQ-0002" title="Documentación sobre cada asesor que gestiona préstamos">
+                                [IRQ-0002] 
+Documentación sobre cada asesor que gestiona préstamos</a>
+</li>
+<li>
+<a href="#OBJ-0001" title="Gestión de Préstamos">
+                                [OBJ-0001] 
+Gestión de Préstamos</a>
+</li>
+<li>
+<a href="#OBJ-0003" title="Control mensual">
+                                [OBJ-0003] 
+Control mensual</a>
+</li>
+<li>
+<a href="#OBJ-0004" title="Cancelar préstamo">
+                                [OBJ-0004] 
+Cancelar préstamo</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá almacenar la información correspondiente a 
+<em>
+un <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>..
+				</em>
+    En concreto:
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Datos específicos</th>
+<td colspan="2" align="left" valign="top">
+<ul>
+<li>
+<a name="DAT-0135" />
+Número de <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>
+</li>
+<li>
+<a name="DAT-0136" />
+Cliente al que se le da el <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>
+</li>
+<li>
+<a name="DAT-0137" />
+<a href="#GLO-0010" title="Persona que avala.">Avalista</a> del cliente</li>
+<li>
+<a name="DAT-0138" />
+<a href="#GLO-0018" title="(financiero) es el profesional que ayuda a descubrir las necesidades financieras, analizando circunstancias pasadas, presentes y futuras de su cliente, teniendo en cuenta la edad, su patrimonio disponible, su tipo impositivo, su situación profesional y familiar, y el resto de inversiones que pueda disponer. Una vez analizado su perfil de riesgo y sus necesidades, el asesor llevará a cabo sus recomendaciones de inversión, asesorándole según sus circunstancias y necesidades vayan cambiando y adaptándolas al momento actual.">Asesor</a> financiero que gestiona el <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>
+</li>
+<li>
+<a name="DAT-0139" />
+Importe por el que se concede el <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>
+</li>
+<li>
+<a name="DAT-0140" />
+Número de plazos en que se divide el <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>
+</li>
+<li>
+<a name="DAT-0141" />
+Tipo de interés al que está sujeto el <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>
+</li>
+<li>
+<a name="DAT-0142" />
+Tipo del <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a> (hipotecario o financiero)</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th rowspan="2" align="left" valign="top">Tiempo de vida</th>
+<th align="left" valign="top">Medio</th>
+<th align="left" valign="top">Máximo</th>
+</tr>
+<tr>
+<td>10 
+                        año(s)</td>
+<td>30 
+                        año(s)</td>
+</tr>
+<tr>
+<th rowspan="2" align="left" valign="top">Ocurrencias simultáneas</th>
+<th align="left" valign="top">Medio</th>
+<th align="left" valign="top">Máximo</th>
+</tr>
+<tr>
+<td>500</td>
+<td>2000</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">pendiente de verificación</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SEC-0014" />
+<h2 align="left">5.2 
+Requisitos funcionales</h2><a name="SEC-0015" />
+<h3 align="left">5.2.1 
+Diagramas de casos de uso</h3><a name="GRF-0008" />
+<p align="center">
+<img src=".\img\Casos de uso imagen 1.wmf" title=".\img\Casos de uso imagen 1.wmf" />
+</p>
+<p align="center">
+<b>Figura 1</b>:
+                
+Diagrama de subsistemas</p>
+<a name="GRF-0005" />
+<p align="center">
+<img src=".\img\Alta de cliente.wmf" title=".\img\Alta de cliente.wmf" />
+</p>
+<p align="center">
+<b>Figura 2</b>:
+                
+Diagrama de casos de uso del Sistema de Alta de Cliente</p>
+<a name="GRF-0006" />
+<p align="center">
+<img src=".\img\Cancelar prestamo.wmf" title=".\img\Cancelar prestamo.wmf" />
+</p>
+<p align="center">
+<b>Figura 3</b>:
+                
+Diagrama de casos de uso del Sistema de Cancelar Préstamo</p>
+<a name="GRF-0011" />
+<p align="center">
+<img src=".\img\Caso de Uso - Comprobar Solvencia.wmf" title=".\img\Caso de Uso - Comprobar Solvencia.wmf" />
+</p>
+<p align="center">
+<b>Figura 4</b>:
+                
+Diagrama de Caso de Uso de Comprobación de Solvencia del Cliente</p>
+<a name="GRF-0012" />
+<p align="center">
+<img src=".\img\Caso de Uso - Comprobar Pago Mensual.wmf" title=".\img\Caso de Uso - Comprobar Pago Mensual.wmf" />
+</p>
+<p align="center">
+<b>Figura 5</b>:
+                
+Diagrama de Caso de Uso de Comprobación de Pago Mensual</p>
+<a name="SEC-0016" />
+<h3 align="left">5.2.2 
+Definicion de los actores</h3><a name="ACT-0001" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">ACT-0001</th>
+<th align="left" valign="top" width="100%">
+<a href="#GLO-0018" title="(financiero) es el profesional que ayuda a descubrir las necesidades financieras, analizando circunstancias pasadas, presentes y futuras de su cliente, teniendo en cuenta la edad, su patrimonio disponible, su tipo impositivo, su situación profesional y familiar, y el resto de inversiones que pueda disponer. Una vez analizado su perfil de riesgo y sus necesidades, el asesor llevará a cabo sus recomendaciones de inversión, asesorándole según sus circunstancias y necesidades vayan cambiando y adaptándolas al momento actual.">Asesor</a> Financiero</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 11/05/2010 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0004">
+Carmen María Sivianes Burgos</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0005">
+María Antonia Escribano Rodríguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    Este actor representa
+<em>al <a href="#GLO-0018" title="(financiero) es el profesional que ayuda a descubrir las necesidades financieras, analizando circunstancias pasadas, presentes y futuras de su cliente, teniendo en cuenta la edad, su patrimonio disponible, su tipo impositivo, su situación profesional y familiar, y el resto de inversiones que pueda disponer. Una vez analizado su perfil de riesgo y sus necesidades, el asesor llevará a cabo sus recomendaciones de inversión, asesorándole según sus circunstancias y necesidades vayan cambiando y adaptándolas al momento actual.">asesor</a> encargado de tratar con el cliente.</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="ACT-0002" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">ACT-0002</th>
+<th align="left" valign="top" width="100%">
+Servicio de Información del Banco de España</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 14/05/2010 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+María De Miguel Jiménez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0005">
+María Antonia Escribano Rodríguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    Este actor representa
+<em>el servicio de información del Banco de España para atender las solicitudes sobre la situación financiera de una persona.</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SEC-0017" />
+<h3 align="left">5.2.3 
+Casos de uso del sistema</h3><a name="SEC-0023" />
+<h4 align="left">5.2.3.1 
+Subsistema de gestión de clientes</h4><a name="UC-0001" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0001</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Alta de cliente</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 10/05/2010 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0004">
+Carmen María Sivianes Burgos</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0005">
+María Antonia Escribano Rodríguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#OBJ-0001" title="Gestión de Préstamos">
+                                [OBJ-0001] 
+Gestión de Préstamos</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+el cliente solicita ser dado de alta en el banco.</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+El cliente no está almacenado en el sistema.</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="5">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0001" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa al asesor encargado de tratar con el cliente."> Asesor Financiero (ACT-0001)
+    </a>
+<em>
+solicita al sistema el alta de un nuevo cliente según sus datos identificativos.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0002" />
+<td align="center" valign="top">2</td>
+<td>El
+     
+    sistema<em>
+pide los datos del cliente.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0003" />
+<td align="center" valign="top">3</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa al asesor encargado de tratar con el cliente."> Asesor Financiero (ACT-0001)
+    </a>
+<em>
+introduce los datos del cliente en el sistema.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0004" />
+<td align="center" valign="top">4</td>
+<td>El
+     
+    sistema<em>
+almacena los datos del cliente.</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+El cliente queda almacenado en el sistema.</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+3
+veces por
+                         
+                        semana(s)</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0005" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0005</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Comprobar solvencia del cliente</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 05/06/2010 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0002">
+José Antonio Jiménez Carmona</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Aurelio Rodríguez Urbano</a>
+<br />
+</li>
+<li>
+<a href="#STK-0005">
+María Antonia Escribano Rodríguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">Ninguno</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+<font color="red"><b>PD</b></font>
+</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+El cliente debe ser cliente del banco, haber rellenado los formularios pertinentes y aportar la documentación necesaria.</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="9">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0053" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa al asesor encargado de tratar con el cliente."> Asesor Financiero (ACT-0001)
+    </a>
+<em>
+solicita al sistema la <a href="#GLO-0012" title="Relación nominal de los individuos que en una oficina pública o particular han de percibir haberes y justificar con su firma haberlos recibido.">nómina</a> y la <a href="#GLO-0011" title="La que se hace a la Administración tributaria manifestando la naturaleza y circunstancias del hecho imponible.">declaración de la renta</a> del cliente</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0055" />
+<td align="center" valign="top">2</td>
+<td>El
+     
+    sistema<em>
+aporta al <a href="#GLO-0018" title="(financiero) es el profesional que ayuda a descubrir las necesidades financieras, analizando circunstancias pasadas, presentes y futuras de su cliente, teniendo en cuenta la edad, su patrimonio disponible, su tipo impositivo, su situación profesional y familiar, y el resto de inversiones que pueda disponer. Una vez analizado su perfil de riesgo y sus necesidades, el asesor llevará a cabo sus recomendaciones de inversión, asesorándole según sus circunstancias y necesidades vayan cambiando y adaptándolas al momento actual.">asesor</a> la <a href="#GLO-0012" title="Relación nominal de los individuos que en una oficina pública o particular han de percibir haberes y justificar con su firma haberlos recibido.">nómina</a> y la <a href="#GLO-0011" title="La que se hace a la Administración tributaria manifestando la naturaleza y circunstancias del hecho imponible.">declaración de la renta</a> del ciente.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0056" />
+<td align="center" valign="top">3</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa al asesor encargado de tratar con el cliente."> Asesor Financiero (ACT-0001)
+    </a>
+<em>
+analiza los datos y determina una decisión.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0057" />
+<td align="center" valign="top">4</td>
+<td>Si<em>
+el cliente es solvente,
+                                </em>el
+     
+    sistema<em>
+pide al <a href="#GLO-0018" title="(financiero) es el profesional que ayuda a descubrir las necesidades financieras, analizando circunstancias pasadas, presentes y futuras de su cliente, teniendo en cuenta la edad, su patrimonio disponible, su tipo impositivo, su situación profesional y familiar, y el resto de inversiones que pueda disponer. Una vez analizado su perfil de riesgo y sus necesidades, el asesor llevará a cabo sus recomendaciones de inversión, asesorándole según sus circunstancias y necesidades vayan cambiando y adaptándolas al momento actual.">asesor</a> la <a href="#GLO-0017" title="Es el tiempo acumulado por un trabajador durante la vida activa que haya trabajado en una o varias empresas u organismos oficiales.">vida laboral</a> del cliente para comprobar su estabilidad.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0058" />
+<td align="center" valign="top">5</td>
+<td>Si<em>
+el cliente no es estable,
+                                </em>el
+     
+    sistema<em>
+el sistema solicita al <a href="#GLO-0018" title="(financiero) es el profesional que ayuda a descubrir las necesidades financieras, analizando circunstancias pasadas, presentes y futuras de su cliente, teniendo en cuenta la edad, su patrimonio disponible, su tipo impositivo, su situación profesional y familiar, y el resto de inversiones que pueda disponer. Una vez analizado su perfil de riesgo y sus necesidades, el asesor llevará a cabo sus recomendaciones de inversión, asesorándole según sus circunstancias y necesidades vayan cambiando y adaptándolas al momento actual.">asesor</a> garantías sobre el cliente.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0059" />
+<td align="center" valign="top">6</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa al asesor encargado de tratar con el cliente."> Asesor Financiero (ACT-0001)
+    </a>
+<em>
+introduce en el sistema los títulos de propiedad del cliente si posee, si no, introduce sus <a href="#GLO-0009" title="Firma que se pone al pie de una letra u otro documento de crédito, para responder de su pago en caso de no efectuarlo la persona principalmente obligada a él.">avales</a>.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0060" />
+<td align="center" valign="top">7</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa al asesor encargado de tratar con el cliente."> Asesor Financiero (ACT-0001)
+    </a>
+<em>
+pide información del cliente al Banco de España y la introduce en el sistema para ser analizada.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0061" />
+<td align="center" valign="top">8</td>
+<td>El
+     
+    sistema<em>
+manda al <a href="#GLO-0010" title="Persona que avala.">avalista</a> la solicitud y éste estudia las condiciones, si acepta se formaliza firmando el contrato en el <a href="#GLO-0014" title="Funcionario público autorizado para dar fe de los contratos, testamentos y otros actos extrajudiciales, conforme a las leyes.">notario</a>.</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+Se conoce si al cliente se le deniega o concede el <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a> después de comprobar su solvencia.</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+1
+veces por
+                         
+                        año(s)</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">pendiente de verificación</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">media</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SEC-0024" />
+<h4 align="left">5.2.3.2 
+Subsistema de gestión de préstamos</h4><a name="UC-0002" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0002</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Cancelar <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>
+</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 11/05/2010 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0004">
+Carmen María Sivianes Burgos</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0005">
+María Antonia Escribano Rodríguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#IRQ-0004" title="Información sobre Préstamos">
+                                [IRQ-0004] 
+Información sobre Préstamos</a>
+</li>
+<li>
+<a href="#OBJ-0004" title="Cancelar préstamo">
+                                [OBJ-0004] 
+Cancelar préstamo</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+el cliente solicita cancelar el <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>.</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+El cliente tiene un <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a> pendiente.</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="4">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0005" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa al asesor encargado de tratar con el cliente."> Asesor Financiero (ACT-0001)
+    </a>
+<em>
+calcula las tasas y el total a pagar por el cliente.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0006" />
+<td align="center" valign="top">2</td>
+<td>El
+     
+    sistema<em>
+recibe del cliente la cantidad solicitada.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0007" />
+<td align="center" valign="top">3</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa al asesor encargado de tratar con el cliente."> Asesor Financiero (ACT-0001)
+    </a>
+<em>
+formaliza la cancelación del <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a> e informa al cliente.</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+El cliente solventa su deuda con el banco.</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+5
+veces por
+                         
+                        semana(s)</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0003" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0003</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Registrar aceptación de un <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>
+</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 14/05/2010 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+María De Miguel Jiménez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0005">
+María Antonia Escribano Rodríguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#OBJ-0001" title="Gestión de Préstamos">
+                                [OBJ-0001] 
+Gestión de Préstamos</a>
+</li>
+<li>
+<a href="#IRQ-0004" title="Información sobre Préstamos">
+                                [IRQ-0004] 
+Información sobre Préstamos</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+se procede a registrar la aceptación de un nuevo <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>.</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+El cliente es solvente y tiene <a href="#GLO-0009" title="Firma que se pone al pie de una letra u otro documento de crédito, para responder de su pago en caso de no efectuarlo la persona principalmente obligada a él.">aval</a>.</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="5">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0008" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa al asesor encargado de tratar con el cliente."> Asesor Financiero (ACT-0001)
+    </a>
+<em>
+pide registrar la aceptación del <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>
+</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0009" />
+<td align="center" valign="top">2</td>
+<td>El
+     
+    sistema<em>
+solicita la información relativa al <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>
+</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0010" />
+<td align="center" valign="top">3</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa al asesor encargado de tratar con el cliente."> Asesor Financiero (ACT-0001)
+    </a>
+<em>
+aporta la información solicitada</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0011" />
+<td align="center" valign="top">4</td>
+<td>El
+     
+    sistema<em>
+almacena la información y registra la aceptación</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+La concesión del <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a> se ha registrado como aceptada.</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+2
+veces por
+                         
+                        semana(s)</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">hay presión</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0004" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0004</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Comprobar registro del Banco de España</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 14/05/2010 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+María De Miguel Jiménez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0005">
+María Antonia Escribano Rodríguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#OBJ-0001" title="Gestión de Préstamos">
+                                [OBJ-0001] 
+Gestión de Préstamos</a>
+</li>
+<li>
+<a href="#IRQ-0004" title="Información sobre Préstamos">
+                                [IRQ-0004] 
+Información sobre Préstamos</a>
+</li>
+<li>
+<a href="#IRQ-0001" title="Documentación sobre cada cliente y avalista">
+                                [IRQ-0001] 
+Documentación sobre cada cliente y avalista</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+se procede a comprobar si el cliente posee ya <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamos</a> con otras entidades.</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+<a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">Préstamo</a> pendiente de comprobación para ser aceptado.</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="7">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0012" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa al asesor encargado de tratar con el cliente."> Asesor Financiero (ACT-0001)
+    </a>
+<em>
+ pide al sistema que inicie la comprobación de un cliente</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0013" />
+<td align="center" valign="top">2</td>
+<td>El
+     
+    sistema<em>
+solicita los datos del cliente a comprobar</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0014" />
+<td align="center" valign="top">3</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa al asesor encargado de tratar con el cliente."> Asesor Financiero (ACT-0001)
+    </a>
+<em>
+introduce los datos del cliente a estudiar</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0015" />
+<td align="center" valign="top">4</td>
+<td>El
+     
+    sistema<em>
+envía la solicitud de información al Banco de España</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0016" />
+<td align="center" valign="top">5</td>
+<td>El actor<a href="#ACT-0002" title="Este actor representa el servicio de información del Banco de España para atender las solicitudes sobre la situación financiera de una persona.">
+Servicio de Información del Banco de España (ACT-0002)
+    </a>
+<em>
+proporciona la información financiera solicitada</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0017" />
+<td align="center" valign="top">6</td>
+<td>El
+     
+    sistema<em>
+almacena la información e informa al <a href="#GLO-0018" title="(financiero) es el profesional que ayuda a descubrir las necesidades financieras, analizando circunstancias pasadas, presentes y futuras de su cliente, teniendo en cuenta la edad, su patrimonio disponible, su tipo impositivo, su situación profesional y familiar, y el resto de inversiones que pueda disponer. Una vez analizado su perfil de riesgo y sus necesidades, el asesor llevará a cabo sus recomendaciones de inversión, asesorándole según sus circunstancias y necesidades vayan cambiando y adaptándolas al momento actual.">asesor</a> de su recepción</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+Se conoce la situación actual del cliente en materia de <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamos</a>.</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+3
+veces por
+                         
+                        semana(s)</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">hay presión</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">validado</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0006" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0006</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Comprobar pago de un plazo</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 05/06/2010 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0002">
+José Antonio Jiménez Carmona</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Aurelio Rodríguez Urbano</a>
+<br />
+</li>
+<li>
+<a href="#STK-0005">
+María Antonia Escribano Rodríguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#IRQ-0004" title="Información sobre Préstamos">
+                                [IRQ-0004] 
+Información sobre Préstamos</a>
+</li>
+<li>
+<a href="#OBJ-0003" title="Control mensual">
+                                [OBJ-0003] 
+Control mensual</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+<font color="red"><b>PD</b></font>
+</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+El cliente debe tener un <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a> pendiente.</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="3">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0064" />
+<td align="center" valign="top">1</td>
+<td>El
+     
+    sistema<em>
+comprueba si el cliente ha pagado en el mes actual.</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0065" />
+<td align="center" valign="top">2</td>
+<td>Si<em>
+el cliente ha pagado el plazo,
+                                </em>el
+     
+    sistema<em>
+termina la comprobación hasta el próximo mes y si era el ultimo plazo, certifica la cancelación.</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+La deuda mensual del cliente con el banco debe quedar resuelta.</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="5">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STX-0001" />
+<td align="center" valign="top">2</td>
+<td>Si<em>
+el cliente no ha pagado el plazo,
+                            </em>el
+     
+    sistema<em>
+declara una situación de irregularidad acerca del cliente y llama al cliente.</em>,
+                            a continuación este caso de uso
+                             
+                            <em>queda sin efecto</em>
+</td>
+</tr>
+<tr>
+<a name="STX-0003" />
+<td align="center" valign="top">2</td>
+<td>Si<em>
+el cliente ha sido declarado en situación de irregularidad y después de la llamada no ha pagado el plazo,
+                            </em>el
+     
+    sistema<em>
+espera 90 días y vuelve a llamar al cliente.</em>,
+                            a continuación este caso de uso
+                             
+                            <em>queda sin efecto</em>
+</td>
+</tr>
+<tr>
+<a name="STX-0005" />
+<td align="center" valign="top">2</td>
+<td>Si<em>
+después de la espera de 90 días y la llamada, el cliente no ha pagado el plazo,
+                            </em>el
+     
+    sistema<em>
+declara al cliente como moroso, reclama al <a href="#GLO-0010" title="Persona que avala.">avalista</a> o <a href="#GLO-0010" title="Persona que avala.">avalistas</a> y espera 150 días.</em>,
+                            a continuación este caso de uso
+                             
+                            <em>queda sin efecto</em>
+</td>
+</tr>
+<tr>
+<a name="STX-0006" />
+<td align="center" valign="top">2</td>
+<td>Si<em>
+después de la espera de 150 días, ni el cliente ni el <a href="#GLO-0010" title="Persona que avala.">avalista</a> pueden pagar,
+                            </em>el
+     
+    sistema<em>
+procede a ejecutar el <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>.</em>,
+                            a continuación este caso de uso
+                             
+                            <em>queda sin efecto</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+1
+veces por
+                         
+                        mes(es)</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">hay presión</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">pendiente de verificación</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">media</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0007" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0007</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Alta de <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">Préstamo</a>
+</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 08/06/2010 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0001">
+María De Miguel Jiménez</a>
+<br />
+</li>
+<li>
+<a href="#STK-0003">
+Miguel Centeno Muñoz</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Aurelio Rodríguez Urbano</a>
+<br />
+</li>
+<li>
+<a href="#STK-0007">
+José Antonio Jiménez Budia</a>
+<br />
+</li>
+<li>
+<a href="#STK-0005">
+María Antonia Escribano Rodríguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#OBJ-0001" title="Gestión de Préstamos">
+                                [OBJ-0001] 
+Gestión de Préstamos</a>
+</li>
+<li>
+<a href="#IRQ-0004" title="Información sobre Préstamos">
+                                [IRQ-0004] 
+Información sobre Préstamos</a>
+</li>
+<li>
+<a href="#IRQ-0001" title="Documentación sobre cada cliente y avalista">
+                                [IRQ-0001] 
+Documentación sobre cada cliente y avalista</a>
+</li>
+<li>
+<a href="#IRQ-0002" title="Documentación sobre cada asesor que gestiona préstamos">
+                                [IRQ-0002] 
+Documentación sobre cada asesor que gestiona préstamos</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+se procede a dar de alta un nuevo <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>.</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+Cliente registrado en el sistema.</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="7">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0073" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa al asesor encargado de tratar con el cliente."> Asesor Financiero (ACT-0001)
+    </a>
+<em>
+solicita comenzar proceso de alta de un nuevo <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>
+</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0074" />
+<td align="center" valign="top">2</td>
+<td>El
+     
+    sistema<em>
+solicita los datos del cliente y el importe del <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>
+</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0075" />
+<td align="center" valign="top">3</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa al asesor encargado de tratar con el cliente."> Asesor Financiero (ACT-0001)
+    </a>
+<em>
+aporta los datos solicitados</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0076" />
+<td align="center" valign="top">4</td>
+<td>El
+     
+    sistema<em>
+solicita la documentación aportada por el cliente</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0078" />
+<td align="center" valign="top">5</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa al asesor encargado de tratar con el cliente."> Asesor Financiero (ACT-0001)
+    </a>
+<em>
+introduce la documentación</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0079" />
+<td align="center" valign="top">6</td>
+<td>El
+     
+    sistema<em>
+registra la documentación y termina el proceso</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+Hay un nuevo <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a> dado de alta en el sistema.</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+1
+veces por
+                         
+                        semana(s)</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">pendiente de verificación</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">media</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="UC-0008" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">UC-0008</th>
+<th align="left" valign="top" width="100%" colspan="2">
+Formalizar <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">Préstamo</a>
+</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top" colspan="2">1.0
+            ( 09/06/2010 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0003">
+Miguel Centeno Muñoz</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="2">
+<ul>
+<li>
+<a href="#STK-0006">
+Aurelio Rodríguez Urbano</a>
+<br />
+</li>
+<li>
+<a href="#STK-0007">
+José Antonio Jiménez Budia</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="2">
+<li>
+<a href="#OBJ-0001" title="Gestión de Préstamos">
+                                [OBJ-0001] 
+Gestión de Préstamos</a>
+</li>
+<li>
+<a href="#IRQ-0004" title="Información sobre Préstamos">
+                                [IRQ-0004] 
+Información sobre Préstamos</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td colspan="2">
+    El sistema deberá comportarse tal como se describe en el siguiente
+
+    caso de uso cuando
+<em>
+se registra la formalización de un <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>.</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Precondición</th>
+<td align="left" valign="top" colspan="2">
+Documentación firmada ante <a href="#GLO-0014" title="Funcionario público autorizado para dar fe de los contratos, testamentos y otros actos extrajudiciales, conforme a las leyes.">notario</a> y recibida por el <a href="#GLO-0018" title="(financiero) es el profesional que ayuda a descubrir las necesidades financieras, analizando circunstancias pasadas, presentes y futuras de su cliente, teniendo en cuenta la edad, su patrimonio disponible, su tipo impositivo, su situación profesional y familiar, y el resto de inversiones que pueda disponer. Una vez analizado su perfil de riesgo y sus necesidades, el asesor llevará a cabo sus recomendaciones de inversión, asesorándole según sus circunstancias y necesidades vayan cambiando y adaptándolas al momento actual.">asesor</a>.</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="3">Secuencia normal</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<a name="STP-0080" />
+<td align="center" valign="top">1</td>
+<td>El actor<a href="#ACT-0001" title="Este actor representa al asesor encargado de tratar con el cliente."> Asesor Financiero (ACT-0001)
+    </a>
+<em>
+introduce en el sistema la documentación firmada ante <a href="#GLO-0014" title="Funcionario público autorizado para dar fe de los contratos, testamentos y otros actos extrajudiciales, conforme a las leyes.">notario</a>
+</em>
+</td>
+</tr>
+<tr>
+<a name="STP-0081" />
+<td align="center" valign="top">2</td>
+<td>El
+     
+    sistema<em>
+registra la información y formaliza el <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a> ingresando el importe al cliente</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Postcondición</th>
+<td align="left" valign="top" colspan="2">
+<a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">Préstamo</a> formalizado.</td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Excepciones</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Acción</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top" rowspan="2">Rendimiento</th>
+<th align="center" valign="top">Paso</th>
+<th align="left" valign="top" width="100%">Tiempo máximo</th>
+</tr>
+<tr>
+<td align="center" valign="top">
+                        -
+                    </td>
+<td>
+                        -
+                    </td>
+</tr>
+<tr>
+<th align="left" valign="top">Frecuencia esperada</th>
+<td colspan="2">
+1
+veces por
+                         
+                        semana(s)</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="2">importante</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="2">hay presión</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="2">pendiente de verificación</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="2">media</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="2">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="PRG-0006" />
+<p>- Registrar cliente
+<br />- Comprobar solvencia
+<br />- Comprobar <a href="#GLO-0009" title="Firma que se pone al pie de una letra u otro documento de crédito, para responder de su pago en caso de no efectuarlo la persona principalmente obligada a él.">aval</a>
+<br />- Formalizar <a href="#GLO-0009" title="Firma que se pone al pie de una letra u otro documento de crédito, para responder de su pago en caso de no efectuarlo la persona principalmente obligada a él.">aval</a>
+<br />- Comprobar registro Banco España
+<br />- Confirmar <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>
+<br />- Registrar <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a> hipotecario
+<br />- Comprobar pago de un plazo
+<br />- Ejecutar <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>
+<br />- Confirmar fin <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>
+<br />- Cancelar <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>
+<br />- Formalizar <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>
+<br />- Ejecutar <a href="#GLO-0009" title="Firma que se pone al pie de una letra u otro documento de crédito, para responder de su pago en caso de no efectuarlo la persona principalmente obligada a él.">aval</a>
+<br />- Decidir aceptación <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>
+</p>
+<a name="SEC-0019" />
+<h2 align="left">5.3 
+Reglas de negocio</h2><a name="CRQ-0001" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">CRQ-0001</th>
+<th align="left" valign="top" width="100%">
+Unicidad de <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamos</a> hipotecarios</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 09/06/2010 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+María De Miguel Jiménez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0005">
+María Antonia Escribano Rodríguez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">
+<li>
+<a href="#OBJ-0001" title="Gestión de Préstamos">
+                                [OBJ-0001] 
+Gestión de Préstamos</a>
+</li>
+<li>
+<a href="#IRQ-0004" title="Información sobre Préstamos">
+                                [IRQ-0004] 
+Información sobre Préstamos</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+	La información almacenada por el sistema deberá satisfacer la siguiente restricción: 
+<em>
+Un cliente sólo puede tener un <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a> hipotecario.</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="1">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="1">pendiente de validación</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="1">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SEC-0020" />
+<h2 align="left">5.4 
+Requisitos no funcionales</h2><a name="NFR-0001" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">NFR-0001</th>
+<th align="left" valign="top" width="100%">
+Autenticación para <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamos</a>
+</th>
+</tr>
+<tr>
+<th align="left" valign="top">Versión</th>
+<td align="left" valign="top">1.0 
+			( 09/06/2010 )
+        </td>
+</tr>
+<tr>
+<th align="left" valign="top">Autores</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0001">
+María De Miguel Jiménez</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Fuentes</th>
+<td align="left" valign="top" colspan="1">
+<ul>
+<li>
+<a href="#STK-0007">
+José Antonio Jiménez Budia</a>
+<br />
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Dependencias</th>
+<td align="left" valign="top" colspan="1">
+<li>
+<a href="#OBJ-0001" title="Gestión de Préstamos">
+                                [OBJ-0001] 
+Gestión de Préstamos</a>
+</li>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Descripción</th>
+<td align="left" valign="top">
+    El sistema deberá 
+<em>
+permitir la autentificación de usuarios, por nombre y contraseña, para los <a href="#GLO-0018" title="(financiero) es el profesional que ayuda a descubrir las necesidades financieras, analizando circunstancias pasadas, presentes y futuras de su cliente, teniendo en cuenta la edad, su patrimonio disponible, su tipo impositivo, su situación profesional y familiar, y el resto de inversiones que pueda disponer. Una vez analizado su perfil de riesgo y sus necesidades, el asesor llevará a cabo sus recomendaciones de inversión, asesorándole según sus circunstancias y necesidades vayan cambiando y adaptándolas al momento actual.">asesores</a> financieros en la gestión de <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamos</a>.</em>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Importancia</th>
+<td align="left" valign="top" colspan="1">vital</td>
+</tr>
+<tr>
+<th align="left" valign="top">Urgencia</th>
+<td align="left" valign="top" colspan="1">inmediatamente</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estado</th>
+<td align="left" valign="top" colspan="1">pendiente de validación</td>
+</tr>
+<tr>
+<th align="left" valign="top">Estabilidad</th>
+<td align="left" valign="top" colspan="1">alta</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SEC-0012" />
+<h1 align="left">6 
+Matriz de rastreabilidad</h1><a name="TRM-0001" />
+<table border="1" width="100%">
+<tr>
+<th bgcolor="#c8e0e0">TRM-0001</th>
+<th align="center" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #OBJ-0001" title="Gestión de Préstamos">OBJ-0001</a>
+</th>
+<th align="center" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #OBJ-0002" title="Comprobar solvencia">OBJ-0002</a>
+</th>
+<th align="center" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #OBJ-0003" title="Control mensual">OBJ-0003</a>
+</th>
+<th align="center" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #OBJ-0004" title="Cancelar préstamo">OBJ-0004</a>
+</th>
+</tr>
+<tr>
+<th align="left" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #IRQ-0001" title="Documentación sobre cada cliente y avalista">IRQ-0001</a>
+</th>
+<td align="center" valign="top">
+<img src="&#xA;d:\rem\xml\default\trace.gif&#xA;" />
+</td>
+<td align="center" valign="top">
+<img src="&#xA;d:\rem\xml\default\trace.gif&#xA;" />
+</td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+</tr>
+<tr>
+<th align="left" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #IRQ-0002" title="Documentación sobre cada asesor que gestiona préstamos">IRQ-0002</a>
+</th>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+</tr>
+<tr>
+<th align="left" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #IRQ-0003" title="Documentación sobre cada notario que ha firmado contratos de préstamo">IRQ-0003</a>
+</th>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+</tr>
+<tr>
+<th align="left" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #IRQ-0004" title="Información sobre Préstamos">IRQ-0004</a>
+</th>
+<td align="center" valign="top">
+<img src="&#xA;d:\rem\xml\default\trace.gif&#xA;" />
+</td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+<img src="&#xA;d:\rem\xml\default\trace.gif&#xA;" />
+</td>
+<td align="center" valign="top">
+<img src="&#xA;d:\rem\xml\default\trace.gif&#xA;" />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #CRQ-0001" title="Unicidad de préstamos hipotecarios">CRQ-0001</a>
+</th>
+<td align="center" valign="top">
+<img src="&#xA;d:\rem\xml\default\trace.gif&#xA;" />
+</td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+</tr>
+</table>
+<p align="center">
+<b>Matriz de rastreabilidad</b>:
+        
+Requisitos de información</p>
+<a name="TRM-0002" />
+<table border="1" width="100%">
+<tr>
+<th bgcolor="#c8e0e0">TRM-0002</th>
+<th align="center" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #OBJ-0001" title="Gestión de Préstamos">OBJ-0001</a>
+</th>
+<th align="center" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #OBJ-0002" title="Comprobar solvencia">OBJ-0002</a>
+</th>
+<th align="center" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #OBJ-0003" title="Control mensual">OBJ-0003</a>
+</th>
+<th align="center" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #OBJ-0004" title="Cancelar préstamo">OBJ-0004</a>
+</th>
+<th align="center" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #IRQ-0001" title="Documentación sobre cada cliente y avalista">IRQ-0001</a>
+</th>
+<th align="center" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #IRQ-0002" title="Documentación sobre cada asesor que gestiona préstamos">IRQ-0002</a>
+</th>
+<th align="center" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #IRQ-0003" title="Documentación sobre cada notario que ha firmado contratos de préstamo">IRQ-0003</a>
+</th>
+<th align="center" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #IRQ-0004" title="Información sobre Préstamos">IRQ-0004</a>
+</th>
+</tr>
+<tr>
+<th align="left" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #UC-0001" title="Alta de cliente">UC-0001</a>
+</th>
+<td align="center" valign="top">
+<img src="&#xA;d:\rem\xml\default\trace.gif&#xA;" />
+</td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+</tr>
+<tr>
+<th align="left" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #UC-0002" title="Cancelar préstamo">UC-0002</a>
+</th>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+<img src="&#xA;d:\rem\xml\default\trace.gif&#xA;" />
+</td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+<img src="&#xA;d:\rem\xml\default\trace.gif&#xA;" />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #UC-0003" title="Registrar aceptación de un préstamo">UC-0003</a>
+</th>
+<td align="center" valign="top">
+<img src="&#xA;d:\rem\xml\default\trace.gif&#xA;" />
+</td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+<img src="&#xA;d:\rem\xml\default\trace.gif&#xA;" />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #UC-0004" title="Comprobar registro del Banco de España">UC-0004</a>
+</th>
+<td align="center" valign="top">
+<img src="&#xA;d:\rem\xml\default\trace.gif&#xA;" />
+</td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+<img src="&#xA;d:\rem\xml\default\trace.gif&#xA;" />
+</td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+<img src="&#xA;d:\rem\xml\default\trace.gif&#xA;" />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #UC-0005" title="Comprobar solvencia del cliente">UC-0005</a>
+</th>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+</tr>
+<tr>
+<th align="left" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #UC-0006" title="Comprobar pago de un plazo">UC-0006</a>
+</th>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+<img src="&#xA;d:\rem\xml\default\trace.gif&#xA;" />
+</td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+<img src="&#xA;d:\rem\xml\default\trace.gif&#xA;" />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #UC-0007" title="Alta de Préstamo">UC-0007</a>
+</th>
+<td align="center" valign="top">
+<img src="&#xA;d:\rem\xml\default\trace.gif&#xA;" />
+</td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+<img src="&#xA;d:\rem\xml\default\trace.gif&#xA;" />
+</td>
+<td align="center" valign="top">
+<img src="&#xA;d:\rem\xml\default\trace.gif&#xA;" />
+</td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+<img src="&#xA;d:\rem\xml\default\trace.gif&#xA;" />
+</td>
+</tr>
+<tr>
+<th align="left" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #UC-0008" title="Formalizar Préstamo">UC-0008</a>
+</th>
+<td align="center" valign="top">
+<img src="&#xA;d:\rem\xml\default\trace.gif&#xA;" />
+</td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+<img src="&#xA;d:\rem\xml\default\trace.gif&#xA;" />
+</td>
+</tr>
+</table>
+<p align="center">
+<b>Matriz de rastreabilidad</b>:
+        
+Requisitos funcionales</p>
+<a name="TRM-0003" />
+<table border="1" width="100%">
+<tr>
+<th bgcolor="#c8e0e0">TRM-0003</th>
+<th align="center" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #OBJ-0001" title="Gestión de Préstamos">OBJ-0001</a>
+</th>
+<th align="center" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #OBJ-0002" title="Comprobar solvencia">OBJ-0002</a>
+</th>
+<th align="center" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #OBJ-0003" title="Control mensual">OBJ-0003</a>
+</th>
+<th align="center" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #OBJ-0004" title="Cancelar préstamo">OBJ-0004</a>
+</th>
+</tr>
+<tr>
+<th align="left" valign="top" bgcolor="#c8e0e0">
+<a href="&#xA;                        #NFR-0001" title="Autenticación para préstamos">NFR-0001</a>
+</th>
+<td align="center" valign="top">
+<img src="&#xA;d:\rem\xml\default\trace.gif&#xA;" />
+</td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+<td align="center" valign="top">
+                -
+            </td>
+</tr>
+</table>
+<p align="center">
+<b>Matriz de rastreabilidad</b>:
+        
+Requisitos no funcionales</p>
+<a name="SEC-0013" />
+<h1 align="left">7 
+Glosario de términos</h1><a name="GLO-0009" />
+<p align="left">
+<b> Aval, avales:</b>Firma que se pone al pie de una letra u otro documento de crédito, para responder de su pago en caso de no efectuarlo la persona principalmente obligada a él.</p>
+<a name="GLO-0010" />
+<p align="left">
+<b> Avalista, avalistas:</b>Persona que avala.</p>
+<a name="GLO-0011" />
+<p align="left">
+<b> Declaración de la Renta:</b>La que se hace a la Administración tributaria manifestando la naturaleza y circunstancias del hecho imponible.</p>
+<a name="GLO-0012" />
+<p align="left">
+<b> Nómina, nóminas:</b>Relación nominal de los individuos que en una oficina pública o particular han de percibir haberes y justificar con su firma haberlos recibido.</p>
+<a name="GLO-0013" />
+<p align="left">
+<b> UDO:</b>(O Departamento de Análisis de <a href="#GLO-0016" title="El riesgo de crédito es la posible pérdida que asume un agente económico como consecuencia del incumplimiento de las obligaciones contractuales que incumben a las contrapartes con las que se relaciona. El concepto se relaciona habitualmente con las instituciones financieras y los bancos, pero afecta también a empresas y organismos de otros sectores">Riesgos</a>) Departamento de una instritución bancaria dedicado al análisis de los posibles <a href="#GLO-0016" title="El riesgo de crédito es la posible pérdida que asume un agente económico como consecuencia del incumplimiento de las obligaciones contractuales que incumben a las contrapartes con las que se relaciona. El concepto se relaciona habitualmente con las instituciones financieras y los bancos, pero afecta también a empresas y organismos de otros sectores">riesgos</a> antes de la concesión de un crédito o un <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamo</a>.</p>
+<a name="GLO-0014" />
+<p align="left">
+<b> Notario, notarios:</b>Funcionario público autorizado para dar fe de los contratos, testamentos y otros actos extrajudiciales, conforme a las leyes. 
+<br />
+<br />
+</p>
+<a name="GLO-0015" />
+<p align="left">
+<b> Préstamo, préstamos:</b>Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés. </p>
+<a name="GLO-0016" />
+<p align="left">
+<b> Riesgo, riesgos:</b>El <a href="#GLO-0016" title="El riesgo de crédito es la posible pérdida que asume un agente económico como consecuencia del incumplimiento de las obligaciones contractuales que incumben a las contrapartes con las que se relaciona. El concepto se relaciona habitualmente con las instituciones financieras y los bancos, pero afecta también a empresas y organismos de otros sectores">riesgo</a> de crédito es la posible pérdida que asume un agente económico como consecuencia del incumplimiento de las obligaciones contractuales que incumben a las contrapartes con las que se relaciona. El concepto se relaciona habitualmente con las instituciones financieras y los bancos, pero afecta también a empresas y organismos de otros sectores</p>
+<a name="GLO-0017" />
+<p align="left">
+<b> Vida Laboral:</b>Es el tiempo acumulado por un trabajador durante la vida activa que haya trabajado en una o varias empresas u organismos oficiales.</p>
+<a name="GLO-0018" />
+<p align="left">
+<b> Asesor, asesores:</b>(financiero) es el profesional que ayuda a descubrir las necesidades financieras, analizando circunstancias pasadas, presentes y futuras de su cliente, teniendo en cuenta la edad, su patrimonio  disponible, su tipo impositivo, su situación profesional y familiar, y el resto de inversiones que pueda disponer. Una vez analizado su perfil de <a href="#GLO-0016" title="El riesgo de crédito es la posible pérdida que asume un agente económico como consecuencia del incumplimiento de las obligaciones contractuales que incumben a las contrapartes con las que se relaciona. El concepto se relaciona habitualmente con las instituciones financieras y los bancos, pero afecta también a empresas y organismos de otros sectores">riesgo</a> y sus necesidades, el <a href="#GLO-0018" title="(financiero) es el profesional que ayuda a descubrir las necesidades financieras, analizando circunstancias pasadas, presentes y futuras de su cliente, teniendo en cuenta la edad, su patrimonio disponible, su tipo impositivo, su situación profesional y familiar, y el resto de inversiones que pueda disponer. Una vez analizado su perfil de riesgo y sus necesidades, el asesor llevará a cabo sus recomendaciones de inversión, asesorándole según sus circunstancias y necesidades vayan cambiando y adaptándolas al momento actual.">asesor</a> llevará a cabo sus recomendaciones de inversión, asesorándole según sus circunstancias y necesidades vayan cambiando y adaptándolas al momento actual.</p>
+<a name="SEC-0021" />
+<h1 align="left">A 
+Actas de reuniones</h1><a name="MET-0001" />
+<table border="1" width="100%">
+<tr bgcolor="#c8e0e0">
+<th align="left" valign="top">Reunión</th>
+<th align="left" valign="top" width="100%">
+Primera Reunión</th>
+</tr>
+<tr>
+<th align="left" valign="top">Fecha</th>
+<td align="left" valign="top" colspan="1">12/03/2010</td>
+</tr>
+<tr>
+<th align="left" valign="top">Hora</th>
+<td align="left" valign="top" colspan="1">11:30</td>
+</tr>
+<tr>
+<th align="left" valign="top">Lugar</th>
+<td align="left" valign="top" colspan="1">Oficinas del Banco</td>
+</tr>
+<tr><th align="left" valign="top">Asistentes</th>
+<td align="left" valign="top">
+<ul>
+<li>
+<a href="#STK-0004" title="Carmen María Sivianes Burgos">
+Carmen María Sivianes Burgos</a>
+</li>
+<li>
+<a href="#STK-0007" title="José Antonio Jiménez Budia">
+José Antonio Jiménez Budia</a>
+</li>
+<li>
+<a href="#STK-0002" title="José Antonio Jiménez Carmona">
+José Antonio Jiménez Carmona</a>
+</li>
+<li>
+<a href="#STK-0005" title="María Antonia Escribano Rodríguez">
+María Antonia Escribano Rodríguez</a>
+</li>
+<li>
+<a href="#STK-0001" title="María De Miguel Jiménez">
+María De Miguel Jiménez</a>
+</li>
+<li>
+<a href="#STK-0003" title="Miguel Centeno Muñoz">
+Miguel Centeno Muñoz</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th align="left" valign="top">Resultados</th>
+<td align="left" valign="top" colspan="1">La reunión comienza a las 11:30 en las oficinas de Puerta de Jerez con José Antonio Jiménez Budia, Director de Control de Gestión del Banco Santander en Andalucía. 
+<br />El grupo se presenta ante José Antonio J. B. y, a continuación, éste expone al grupo conceptos básicos de la concesión de <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamos</a> del banco a particulares y su proceso de forma simplificada.
+<br />A las 11:50, José Antonio J. B. acompaña al grupo a las oficinas de la Avda. de la Constitución para hablar con María Alba Jorba Escribano, Analista de <a href="#GLO-0016" title="El riesgo de crédito es la posible pérdida que asume un agente económico como consecuencia del incumplimiento de las obligaciones contractuales que incumben a las contrapartes con las que se relaciona. El concepto se relaciona habitualmente con las instituciones financieras y los bancos, pero afecta también a empresas y organismos de otros sectores">Riesgos</a>, para explicar al grupo el proceso de concesión de <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamos</a> de forma más detallada.
+<br />A las 12:00, comienza la segunda parte de la reunión, con María Alba J. E., presentándose el grupo ante la misma. Después, María Alba J. E. explica al grupo los pasos concretos del proceso de concesión de <a href="#GLO-0015" title="Cantidad de dinero que se solicita, generalmente a una institución financiera, con la obligación de devolverlo con un interés.">préstamos</a> a particulares.
+<br />A las 12:45, finaliza la reunión.</td>
+</tr>
+<tr>
+<th align="left" valign="top">Comentarios</th>
+<td align="left" valign="top" colspan="1">
+Ninguno</td>
+</tr>
+</table>
+<p />
+<a name="SEC-0022" />
+<h1 align="left">B 
+Documentación aportada</h1></body>
+</html>
